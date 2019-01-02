@@ -18,6 +18,7 @@ exports.createPages = ({ graphql, actions }) => {
                 node {
                   fields {
                     slug
+                    listing
                   }
                   frontmatter {
                     title
@@ -60,11 +61,28 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
+    const pathParts = node.fileAbsolutePath.split(path.sep);
+    pathParts.reverse();
+
+    let dirName;
+    if (pathParts[0] === 'index.md') {
+      dirName = pathParts[2];
+    } else {
+      dirName = pathParts[1];
+    }
+
+    const fileName = createFilePath({ node, getNode })
+
     createNodeField({
       name: `slug`,
       node,
-      value,
-    })
+      value: `${dirName}${fileName}`,
+    });
+
+    createNodeField({
+      name: `listing`,
+      node,
+      value: dirName,
+    });
   }
 }
