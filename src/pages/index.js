@@ -16,7 +16,6 @@ class BlogIndex extends React.Component {
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <h2><Link to="/blog/">Blog</Link></h2>
         <h2><Link to="/recipes/">Recipes</Link></h2>
         <h2><a href="https://kijijimap.hammes.io/">À la carte</a></h2>
       </Layout>
