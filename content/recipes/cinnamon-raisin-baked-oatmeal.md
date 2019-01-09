@@ -9,8 +9,8 @@ description: "A convenient and less sugary alternative to granola bars"
 
 * 3 cups rolled oats
 * 1/2 cup brown sugar
-* 2 tsp ground cinnamon
 * 2 tsp baking powder
+* 2 tsp ground cinnamon
 * 1 tsp salt
 * 1 cup milk
 * 2 eggs
@@ -22,7 +22,7 @@ description: "A convenient and less sugary alternative to granola bars"
 
 1. Preheat oven to 350 °F.
 
-2. In a large bowl, mix together oats, brown sugar, cinnamon, baking powder, and salt.
+2. In a large bowl, mix together oats, brown sugar, baking powder, cinnamon, and salt.
 Beat in milk, eggs, melted butter, and vanilla extract.
 Stir in raisins.
 Spread into a 9x13 inch baking dish.
