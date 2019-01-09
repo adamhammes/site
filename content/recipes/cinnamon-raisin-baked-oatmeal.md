@@ -10,6 +10,7 @@ description: "A convenient and less sugary alternative to granola bars"
 * 3 cups rolled oats
 * 1/2 cup brown sugar
 * 2 tsp ground cinnamon
+* 2 tsp baking powder
 * 1 tsp salt
 * 1 cup milk
 * 2 eggs
