@@ -16,22 +16,12 @@ class BlogPostTemplate extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <h1>{post.frontmatter.title}</h1>
-        <p style={{ marginBottom: rhythm(-1) }}>{post.frontmatter.date}</p>
+        <p>{post.frontmatter.date}</p>
         <article dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
+        <hr />
         <Bio />
 
-        <ul
-          style={{
-            listStyle: `none`,
-            padding: 0,
-            marginTop: rhythm(1),
-          }}
-        >
+        <ul>
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
@@ -39,7 +29,7 @@ class BlogPostTemplate extends React.Component {
               </Link>
             )}
           </li>
-          <li style={{ textAlign: 'right' }}>
+          <li>
             {next && (
               <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →
