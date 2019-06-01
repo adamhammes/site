@@ -5,6 +5,8 @@ import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 
+import styles from './post.module.scss'
+
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
@@ -20,7 +22,7 @@ class BlogPostTemplate extends React.Component {
         <hr />
         <Bio />
 
-        <ul>
+        <ul className={styles.extraLinks}>
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">

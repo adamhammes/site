@@ -1,0 +1,10 @@
+.bioContainer {
+  display: flex;
+  margin-bottom: calc(2 * var(--rhythm));
+}
+
+.profilePicture {
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: var(--rhythm);
+}

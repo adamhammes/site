@@ -1,0 +1,12 @@
+.extraLinks {
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    margin: 0 0 var(--rhythm);
+  }
+
+  :nth-child(2) {
+    text-align: right;
+  }
+}
