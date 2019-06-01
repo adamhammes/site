@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import './app.scss'
+import './normalize.scss'
+import styles from './layout.module.scss'
 
 class Layout extends React.Component {
   render() {
@@ -11,13 +13,13 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <h1 className="siteHeader">
+        <h1 className={styles.header}>
           <Link to={`/`}>{title}</Link>
         </h1>
       )
     } else {
       header = (
-        <h3 className="siteHeader">
+        <h3 className={styles.header}>
           <Link to={`/`}>{title}</Link>
         </h3>
       )
