@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import './app.css'
+import './app.scss'
 
 class Layout extends React.Component {
   render() {
