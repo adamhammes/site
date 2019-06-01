@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `/ hammes.io /`,
+    title: `hammes.io/`,
     author: `Adam Hammes`,
     description: `Adam Hammes's personal website.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://hammes.io`,
   },
   plugins: [
     {
@@ -61,11 +61,12 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `src/favicon.png`,
         display: `standalone`,
       },
     },
     `gatsby-plugin-sass`,
+    `gatsby-plugin-favicon`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
   ],

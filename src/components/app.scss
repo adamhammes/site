@@ -5,7 +5,7 @@
 
 body {
   max-width: 40rem;
-  padding: 1.5rem;
+  padding: var(--rhythm);
   width: 100%;
   margin: 0 auto;
   font-family: Georgia, 'Times New Roman', Times, serif;
