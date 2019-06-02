@@ -1,5 +1,9 @@
 .header {
   margin-top: var(--rhythm);
+  font-family: var(--sans-serif-font-stack);
+  font-size: var(--rhythm);
+  font-weight: bold;
+  margin-bottom: var(--rhythm);
 
   a {
     box-shadow: none;
