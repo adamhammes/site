@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import './app.scss'
 import './normalize.scss'
 import styles from './layout.module.scss'
 
