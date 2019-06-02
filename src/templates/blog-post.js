@@ -15,9 +15,10 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title={post.frontmatter.title} description={post.excerpt} />
+        <SEO title={post.frontmatter.title} description={post.description} />
         <h1>{post.frontmatter.title}</h1>
         <p>{post.frontmatter.date}</p>
+        <p>{post.frontmatter.description}</p>
         <article
           className={styles.markdown}
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -64,6 +65,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        description
       }
     }
   }
