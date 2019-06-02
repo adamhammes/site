@@ -32,7 +32,7 @@ And here's a closeup of an individual image:
 ![An example unprocessed image](./original.png)
 
 As part of the project setup, I downloaded the ~2000 images from a 3rd party site onto my laptop.
-Before I could dive into the CSS and start integrating them into the page, however, I needed to two things:
+Before I could dive into the CSS and start integrating them into the page, however, I needed to do two things:
 
 1. Optimize the images
 2. Find a place to host the images.
