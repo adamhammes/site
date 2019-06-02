@@ -9,18 +9,34 @@ class BlogIndex extends React.Component {
   render() {
     const siteTitle = this.props.data.site.siteMetadata.title
 
+    const bio = (
+      <>
+        <strong>Adam Hammes</strong> is a developer, dancer, and extremely
+        amateur cook.
+      </>
+    )
+
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title="Home"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <h2>
-          <a href="https://alacarte.hammes.io/">À la carte</a>
-        </h2>
-        <h2>
-          <Link to="/recipes/">Recipes</Link>
-        </h2>
+        <Bio text={bio} />
+        <h2>Links:</h2>
+        <ul>
+          <li>
+            <a href="/blog">My written articles</a>
+          </li>
+          <li>
+            <a href="/recipes">All the recipes</a> I've cared to save on my
+            site.
+          </li>
+          <li>
+            <a href="https://alacarte.hammes.io">À la carte</a>, a tool for
+            searching for apartments in Québec
+          </li>
+        </ul>
       </Layout>
     )
   }
