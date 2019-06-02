@@ -17,7 +17,8 @@ description: >
 1. [Compressing and converting](#compressing-and-converting-our-images)
 1. [Scaling up](#scaling-up)
 1. [Hosting](#hosting-our-images)
-1. Potential improvements
+1. [Potential improvements](#potential-improvements)
+1. [Conclusion](#conclustion)
 
 ## Presentation of problem
 
@@ -295,7 +296,7 @@ $ open https://$BUCKET_NAME.s3.amazonaws.com/$PUBLIC_PATH/$IMAGE_NAME
 If you see your image, you're officially done with your image pipeline.
 Congratulations!
 
-## Future improvements
+## Potential improvements
 
 Here's a list of improvements we could have implemented throughout workflow, in no particular order:
 
