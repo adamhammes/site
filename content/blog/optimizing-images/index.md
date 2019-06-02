@@ -147,7 +147,7 @@ And the webp (best viewed in Chrome/Firefox):
 To my (near-sighted) eyes, the three are identical.
 We did it!
 
-## Scaling Up
+## Scaling up
 
 So far we've converted 1/2000 images.
 While we _could_ type out the command for all of the 2000, some would say that this isn't the best use of our time, and I would tend to agree.
@@ -211,5 +211,5 @@ $ find compressed/ -iname "*.png" -print0 | \
 ```
 
 This step took considerably longer than the webp conversion - over twelve minutes on my computer.
-Once it's completed, though, you'll have a directory full of juicily compressed pngs and webps!
+Once it's completed, though, you'll have a directory full of trim, beautifully compressed pngs and webps!
 What next?
