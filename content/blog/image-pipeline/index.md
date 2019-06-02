@@ -25,11 +25,11 @@ description: >
 For the last few weeks, I've been working on a website that contains many small images.
 Here is an example page:
 
-![A screenshot of the final project](./image-optimization-introduction.PNG)
+![A screenshot of the final project](./image-optimization-introduction.png)
 
 And here's a closeup of an individual image:
 
-![An example unprocessed image](./original.PNG)
+![An example unprocessed image](./original.png)
 
 As part of the project setup, I downloaded around 2000 external images onto my laptop.
 Before I could start using in my site, I needed to do two things:
@@ -66,7 +66,7 @@ To help you pick which format(s) to use, ask yourself the following questions in
 
 This might seem a little abstract, so let's walk through these rules using our example image from earlier:
 
-![Card image from earlier](./original.PNG)
+![Card image from earlier](./original.png)
 
 1. I support Safari (you probably do too!), so we'll move onto the next question.
 1. Our images _do_ have transparent sections.
@@ -82,11 +82,11 @@ Here's what the markup will look like:
 ```html
 <picture>
   <source
-    srcset="/TRL_128.WEBP"
-    type="image/WEBP" />
+    srcset="/TRL_128.webp"
+    type="image/webp" />
   <img
     alt="Regenerate"
-    src="/TRL_128.PNG" />
+    src="/TRL_128.png" />
 </picture>
 ```
 
@@ -115,20 +115,20 @@ For each of our 2000 original images (in PNG format), we're going to do two thin
 1. Convert the original image from to a lossy WEBP
 
 My work computer is a Mac, so I'll be using tools available on that platform.
-For the PNG compression, this will be [ImageOptim-Cli](https://github.com/JamieMason/ImageOptim-CLI#cloud-installation) and [ImageAlpha](https://PNGmini.com/).
+For the PNG compression, this will be [ImageOptim-Cli](https://github.com/JamieMason/ImageOptim-CLI#cloud-installation) and [ImageAlpha](https://pngmini.com/).
 The WEBP compression will be handled by [ImageMagick](https://imagemagick.org/index.php).
 
 Here's an example for both the PNG and WEBP formats:
 
 ```bash
-$ cp original.PNG compressed.PNG
-$ imageoptim --imagealpha --quality 50 compressed.PNG
-$ mogrify -format WEBP original.PNG
-$ mv original.WEBP compressed.WEBP
+$ cp original.png compressed.png
+$ imageoptim --imagealpha --quality 50 compressed.png
+$ mogrify -format WEBP original.png
+$ mv original.webp compressed.webp
 $ ls -lh
-4.9K compressed.PNG
-2.6K compressed.WEBP
-16K  original.PNG
+4.9K compressed.png
+2.6K compressed.webp
+16K  original.png
 ```
 
 A 69% savings for the compressed PNG and 84% for the WEBP.
@@ -136,15 +136,15 @@ Wow!
 Now, a comparison of image quality.
 Here is the original image:
 
-<img alt="original PNG" src="./original.PNG" />
+<img alt="original png src="./original.png" />
 
 The compressed PNG:
 
-<img alt="compressed PNG" src="./compressed.PNG" />
+<img alt="compressed png" src="./compressed.png" />
 
 And the WEBP (best viewed in Chrome/Firefox):
 
-<img alt="compressed WEBP" src="./compressed.WEBP" />
+<img alt="compressed webp" src="./compressed.webp" />
 
 To my (near-sighted) eyes, the three are identical.
 We did it!
@@ -165,9 +165,9 @@ Next, I'm going to use some find/xarg magic with our previous mogrify command to
 
 ```bash
 $ NUM_CORES="$(getconf _NPROCESSORS_ONLN)"
-$ find compressed/ -iname "*.PNG" -print0 | \
+$ find compressed/ -iname "*.png" -print0 | \
   xargs -0 -n 1 -P $NUM_CORES \
-  mogrify -format WEBP
+  mogrify -format webp
 ```
 
 Let's break down the second command line by line.
@@ -175,7 +175,7 @@ Let's break down the second command line by line.
 We start by grabbing making a list of all the PNG files in the `compressed/` directory:
 
 ```
-find compressed/ -iname "*.PNG" -print0
+find compressed/ -iname "*.png" -print0
 ```
 
 - The `-print0` flag tells find to output a null-delimited list of strings, instead of a newline-delimited list.
@@ -185,12 +185,12 @@ The output of find - our list of PNG files - is then piped into xargs:
 
 ```
 xargs -0 -n 1 -P $NUM_CORES \
-mogrify -format WEBP
+mogrify -format webp
 ```
 
 - `-0` matches the `-print0` option of find, telling xargs to expect a null byte as a delimiter
 - `-n 1` tells xargs to pair exactly one filename to each command.
-  For example, if we set `-n 2`, then the executed command would be `mogrify -format webp file1.PNG file2.PNG`.
+  For example, if we set `-n 2`, then the executed command would be `mogrify -format webp file1.png file2.png`.
 
   If you're running a command that can accept an arbitrary number files as an argument and has a non-negligible startup time, increasing this number will speed up the overall execution time.
   Since mogrify only takes one file as an argument, we have to specify one filename at a time here.
@@ -210,7 +210,7 @@ Instead, we'll reuse our previous command, with two changes:
 
 ```
 $ NUM_CORES="$(getconf _NPROCESSORS_ONLN)"
-$ find compressed/ -iname "*.PNG" -print0 | \
+$ find compressed/ -iname "*.png" -print0 | \
   xargs -0 -n 20 \
   imageoptim --imagealpha --quality 50
 ```
@@ -279,8 +279,8 @@ We'll start with a dryrun to make sure that everything looks okay:
 ```bash
 $ PUBLIC_PATH=assets/images
 $ aws s3 sync compressed/ s3://$BUCKET_NAME/$PUBLIC_PATH --dryrun
-(dryrun) upload: compressed/ROT_114.PNG to s3://image-optimization-blog-post/ROT_114.PNG
-(dryrun) upload: compressed/ROT_114.WEBP to s3://image-optimization-blog-post/ROT_114.WEBP
+(dryrun) upload: compressed/ROT_114.png to s3://image-optimization-blog-post/ROT_114.png
+(dryrun) upload: compressed/ROT_114.webp to s3://image-optimization-blog-post/ROT_114.webp
 ...
 ```
 
@@ -289,8 +289,8 @@ Once you're satisfied of the result, we'll rerun the previous command without `-
 
 ```bash
 $ aws s3 sync compressed/ s3://$BUCKET_NAME/$PUBLIC_PATH
-upload: compressed/ROT_114.WEBP to s3://image-optimization-blog-post/assets/images/ROT_114.WEBP
-upload: compressed/ROT_114.WEBP to s3://image-optimization-blog-post/assets/images/ROT_114.WEBP
+upload: compressed/ROT_114.webp to s3://image-optimization-blog-post/assets/images/ROT_114.webp
+upload: compressed/ROT_114.webp to s3://image-optimization-blog-post/assets/images/ROT_114.webp
 ...
 ```
 
@@ -315,7 +315,7 @@ Here's a list of improvements we could have implemented throughout workflow, in 
   While that's very convenient, it's not always a possibility.
   Due to security policies or the number of images involved, it might be necessary to `ssh` in to the machine where the images reside and run your commands there.
 - We used [ImageOptim](https://imageoptim.com/mac) to compress our PNGs; however, ImageOptim is only available on OS X.
-  I _believe_ that ImageOptim uses [zopfliPNG](https://github.com/imagemin/zopfliPNG-bin) as the underlying compressor, so you could look into that if you're working in a Linux environment.
+  I _believe_ that ImageOptim uses [zopflipng](https://github.com/imagemin/zopflipng-bin) as the underlying compressor, so you could look into that if you're working in a Linux environment.
   This would likely be much faster than using ImageOptim, at the cost of more complicated setup and usage.
 - We used our own AWS account to interact with the image bucket.
   The best practice for AWS would have been to [create a separate IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html) that only has permissions for that bucket, and to do everything with that user's credentials.
