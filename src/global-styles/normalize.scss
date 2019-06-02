@@ -29,6 +29,13 @@ html {
   font-weight: 400;
   word-wrap: break-word;
   line-height: 1.5;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 /* Sections
