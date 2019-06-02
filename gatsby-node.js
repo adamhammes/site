@@ -35,21 +35,28 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         // Create blog posts pages.
-        const posts = result.data.allMarkdownRemark.edges
+        const allPosts = result.data.allMarkdownRemark.edges
+        const sections = ['recipes', 'blog']
 
-        posts.forEach((post, index) => {
-          const previous =
-            index === posts.length - 1 ? null : posts[index + 1].node
-          const next = index === 0 ? null : posts[index - 1].node
+        sections.forEach(sectionName => {
+          const posts = allPosts.filter(
+            post => post.node.fields.listing === sectionName
+          )
 
-          createPage({
-            path: post.node.fields.slug,
-            component: blogPost,
-            context: {
-              slug: post.node.fields.slug,
-              previous,
-              next,
-            },
+          posts.forEach((post, index) => {
+            const previous =
+              index === posts.length - 1 ? null : posts[index + 1].node
+            const next = index === 0 ? null : posts[index - 1].node
+
+            createPage({
+              path: post.node.fields.slug,
+              component: blogPost,
+              context: {
+                slug: post.node.fields.slug,
+                previous,
+                next,
+              },
+            })
           })
         })
       })
@@ -61,14 +68,14 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
-    const pathParts = node.fileAbsolutePath.split(path.sep);
-    pathParts.reverse();
+    const pathParts = node.fileAbsolutePath.split(path.sep)
+    pathParts.reverse()
 
-    let dirName;
+    let dirName
     if (pathParts[0] === 'index.md') {
-      dirName = pathParts[2];
+      dirName = pathParts[2]
     } else {
-      dirName = pathParts[1];
+      dirName = pathParts[1]
     }
 
     const fileName = createFilePath({ node, getNode })
@@ -77,12 +84,12 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       name: `slug`,
       node,
       value: `${dirName}${fileName}`,
-    });
+    })
 
     createNodeField({
       name: `listing`,
       node,
       value: dirName,
-    });
+    })
   }
 }
