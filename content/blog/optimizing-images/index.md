@@ -25,7 +25,7 @@ description: >
 For the last few weeks I've been working on a website that contains many small images.
 Here is an example page:
 
-![asdf](./introduction-example-page.png)
+![A screenshot of the final product](./introduction-example-page.png)
 
 And here's a closeup of an individual image:
 
@@ -134,15 +134,15 @@ Wow!
 Now, a comparison of image quality.
 Here is the original image:
 
-<img src="./original.png" />
+<img alt="original png" src="./original.png" />
 
 The compressed png:
 
-<img src="./compressed.png" />
+<img alt="compressed png" src="./compressed.png" />
 
 And the webp (best viewed in Chrome/Firefox):
 
-<img src="./compressed.webp" />
+<img alt="compressed webp" src="./compressed.webp" />
 
 To my (near-sighted) eyes, the three are identical.
 We did it!
