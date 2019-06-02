@@ -4,7 +4,14 @@ import Image from 'gatsby-image'
 
 import styles from './bio.module.scss'
 
-function Bio() {
+function Bio(props) {
+  const tagline = props.text || (
+    <>
+      Written by <strong>Adam Hammes</strong>, a Yankee living and working in
+      Québec.
+    </>
+  )
+
   return (
     <StaticQuery
       query={bioQuery}
@@ -17,10 +24,7 @@ function Bio() {
               alt={author}
               className={styles.profilePicture}
             />
-            <p>
-              Written by <strong>{author}</strong>, a Yankee living and working
-              in Québec.
-            </p>
+            <p>{tagline}</p>
           </div>
         )
       }}
