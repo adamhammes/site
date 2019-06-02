@@ -25,22 +25,24 @@ class BlogPostTemplate extends React.Component {
         <hr />
         <Bio />
 
-        <ul className={styles.extraLinks}>
-          <li>
+        {(previous || next) && (
+          <ul className={styles.extraLinks}>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
+              <li>
+                <Link to={previous.fields.slug} rel="prev">
+                  ← {previous.frontmatter.title}
+                </Link>
+              </li>
             )}
-          </li>
-          <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
+              <li>
+                <Link to={next.fields.slug} rel="next">
+                  {next.frontmatter.title} →
+                </Link>
+              </li>
             )}
-          </li>
-        </ul>
+          </ul>
+        )}
       </Layout>
     )
   }
