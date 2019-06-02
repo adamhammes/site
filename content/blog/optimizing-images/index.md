@@ -10,8 +10,8 @@ description: >
 
 ## Table of Contents
 
-1. [Presentation of problem](#presentation-of-problem)
-1. [Why optimize?](#why-optimize)
+1. [Presentation of the problem](#presentation-of-the-problem)
+1. [Why optimize?](#why-optimize-your-images)
 1. [Image formats](#image-formats)
 1. [Image fallbacks with the picture element](#image-fallback-with-the-picture-element)
 1. [Compressing and converting](#compressing-and-converting-our-images)
@@ -20,89 +20,87 @@ description: >
 1. [Potential improvements](#potential-improvements)
 1. [Conclusion](#conclustion)
 
-## Presentation of problem
+## Presentation of the problem
 
-For the last few weeks I've been working on a website that contains many small images.
+For the last few weeks, I've been working on a website that contains many small images.
 Here is an example page:
 
-![A screenshot of the final project](./image-optimization-introduction.png)
+![A screenshot of the final project](./image-optimization-introduction.PNG)
 
 And here's a closeup of an individual image:
 
-![An example unprocessed image](./original.png)
+![An example unprocessed image](./original.PNG)
 
-As part of the project setup, I downloaded the ~2000 images from a 3rd party site onto my laptop.
-Before I could dive into the CSS and start integrating them into the page, however, I needed to do two things:
+As part of the project setup, I downloaded around 2000 external images onto my laptop.
+Before I could start using in my site, I needed to do two things:
 
 1. Optimize the images
-2. Find a place to host the images.
+2. Host the images
 
-## Why optimize?
+## Why optimize your images?
 
-The 2019 ["State of the Web" report](https://httparchive.org/reports/state-of-the-web) by the [HTTP Archive](https://httparchive.org/about) found that the average website contains almost 900 KB of images - almost half of the average page weight.
-Additionally, in Google VP Marissa Meyer's keynote speech at Web 2.0, she shares Google's finding that a [half-second increase in page load time led to a 20% drop in traffic](http://glinden.blogspot.com/2006/11/marissa-mayer-at-web-20.html).
+The 2019 ["State of the Web" report](https://httparchive.org/reports/state-of-the-web) by the [HTTP Archive](https://httparchive.org/about) found that the average website contains almost 900 KB of images - about half of the average page weight.
+Additionally, in Google VP Marissa Meyer's keynote speech at Web 2.0, she shared Google's finding that a [half-second increase in page load time led to a 20% drop in traffic](http://glinden.blogspot.com/2006/11/marissa-mayer-at-web-20.html).
 
-Every byte that you can shave off an image is one less byte on your monthly bandwidth bill and one less byte that your user has to wait to download.
+Every byte that you can shave off an image is one less byte on your monthly bandwidth bill and one less byte that your user has to download.
 Everybody wins!
 
 ## Image formats
 
-The two most important steps to optimizing images are picking the right format and serving the correct resolution for the device.
+The two most important steps to optimizing images are picking the right format and serving the correct resolution to client devices.
 Luckily, as our images are very small, we can serve the same resolution for mobile desktop and just concentrate on picking the format.
 
-There are three main image formats:
+That said, there are three principal general-purpose image formats:
 
-1. `jpeg`
-1. `png`
-1. `webp` (the new kid on the block)
+1. JPEG
+1. PNG
+1. WEBP
 
-Choosing between the various formats basically comes down to two things: the image content and the browsers you need to support.
-There's a lot written on this subject, but I'm going to boil it down to four rules of thumb:
+While WEBP is the best format, marrying the features of both JPEG and PNG with a smaller file size, it's not yet supported by Safari or Internet Explorer.
+To help you pick which format(s) to use, ask yourself the following questions in order:
 
-- If your image contains partially transparent sections, `png` and `webp` are your only choices as `jpeg` doesn't support opacity.
-- If you need to support Safari or Internet Explorer, you cannot use `webp` without a fallback (more on that later).
-- If your image is computer-generated (such as a screenshot or a diagram), then prefer `png` over `jpeg`; if the image is a photograph or artwork, `jpeg` is preferred (`webp` works equally well for both).
-
-And finally, `webp` is always preferred.
+1. Do you only support Firefox/Chrome? Use WEBP.
+1. Do your images contain transparent sections? Use WEBP with a PNG fallback (we'll talk about fallback implementation in the next section).
+1. Are your images visually complex, such as photographs or artwork? Use WEBP with a JPEG fallback.
+1. Otherwise, use WEBP with a PNG fallback.
 
 This might seem a little abstract, so let's walk through these rules using our example image from earlier:
 
-![Card image from earlier](./original.png)
+![Card image from earlier](./original.PNG)
 
-1. I support Safari (you probably do too!), so we're going to need a `jpeg` or `png` fallback in addition to `webp`.
-1. The image is fairly complex visually, which would normally indicate `jpeg`; however, the left part of the image contains a transparent gradient, so we have to use `png`.
+1. I support Safari (you probably do too!), so we'll move onto the next question.
+1. Our images _do_ have transparent sections.
+   WEBP with a PNG fallback it is!
 
-Taking those two points into account, we come to the conclusion that our ideal image would `webp`, falling back to a `png` if needed due to browser incompatibility.
+## Image fallback with the picture element
 
-## Image fallback with the `picture` element
-
-In the previous section we decided that a `webp` image with a `png` fallback was the way to go.
-To implement this logic, we're going to make use of the [picture element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture).
-Here's what our final product will (potentially) look like:
+In the previous section we decided that a WEBP image with a PNG fallback was the way to go.
+To implement the fallback behavior, we're going to make use of the [picture element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture).
+Here's what the markup will look like:
 
 <!-- prettier-ignore -->
 ```html
 <picture>
   <source
-    srcset="/TRL_128.webp"
-    type="image/webp" />
+    srcset="/TRL_128.WEBP"
+    type="image/WEBP" />
   <img
     alt="Regenerate"
-    src="/TRL_128.png" />
+    src="/TRL_128.PNG" />
 </picture>
 ```
 
 Let's dig into what's happening here.
-When a browser encounters a `picture` tag, it evaluates its contents sequentially, top to bottom.
-The first `source` or `img` element with a matching `type` and `media` will be the image that's shown.
+When a browser encounters a picture tag, it evaluates its contents sequentially, top to bottom.
+The first `source` or `img` element with a matching type and media query will be the image that's shown.
 
-In the case of Chrome or Firefox, the browser will read the `source` element; as these browsers support `webp` and there is no `media` attribute, it will immediately display this image.
+In the case of Chrome or Firefox, the browser will read the `source` element; as these browsers support WEBP and there is no media query, it will immediately display this image.
 
-In Safari's case, as the browser does not support `webp`, the `source` will be discarded and the fallback `img` element will be used.
+In Safari's case, as the browser does not support WEBP, the `source` will be discarded and the fallback `img` element will be used.
 
 Finally, we have the plucky 6% of Canadian users that navigate with Internet Explorer.
 While IE does not understand the `picture` or `source` element, it will skip to the `img` element and display that.
-Since the `img` contains our fallback `png`, this is exactly the behavior we want.
+Since the `img` contains our fallback PNG, this is exactly the behavior we want.
 
 As I mentioned in the image format section, our situation is a bit unique, in that we are always serving the same resolution for our images.
 If we had bigger images for which we were exporting multiple sizes, we would need to combine the picture element with the srcset attribute.
@@ -111,51 +109,51 @@ This technique is discussed in [MDN's article on responsive images](https://deve
 ## Compressing and converting our images
 
 Let's actually do some stuff!
-For each of our 2000 original images (in png format), we're going to do two things:
+For each of our 2000 original images (in PNG format), we're going to do two things:
 
-1. Lossily compress the source image, keeping the png format
-1. Convert the original image from to a lossy `webp`
+1. Lossily compress the source image, keeping the PNG format
+1. Convert the original image from to a lossy WEBP
 
 My work computer is a Mac, so I'll be using tools available on that platform.
-For the png compression, this will be [ImageOptim-Cli](https://github.com/JamieMason/ImageOptim-CLI#cloud-installation) and [ImageAlpha](https://pngmini.com/).
-The webp compression will be handled by [ImageMagick](https://imagemagick.org/index.php).
+For the PNG compression, this will be [ImageOptim-Cli](https://github.com/JamieMason/ImageOptim-CLI#cloud-installation) and [ImageAlpha](https://PNGmini.com/).
+The WEBP compression will be handled by [ImageMagick](https://imagemagick.org/index.php).
 
-Here's an example for both the png and webp formats:
+Here's an example for both the PNG and WEBP formats:
 
 ```bash
-$ cp original.png compressed.png
-$ imageoptim --imagealpha --quality 50 compressed.png
-$ mogrify -format webp original.png
-$ mv original.webp compressed.webp
+$ cp original.PNG compressed.PNG
+$ imageoptim --imagealpha --quality 50 compressed.PNG
+$ mogrify -format WEBP original.PNG
+$ mv original.WEBP compressed.WEBP
 $ ls -lh
-4.9K compressed.png
-2.6K compressed.webp
-16K  original.png
+4.9K compressed.PNG
+2.6K compressed.WEBP
+16K  original.PNG
 ```
 
-A 69% savings for the compressed png and 84% for the webp.
+A 69% savings for the compressed PNG and 84% for the WEBP.
 Wow!
 Now, a comparison of image quality.
 Here is the original image:
 
-<img alt="original png" src="./original.png" />
+<img alt="original PNG" src="./original.PNG" />
 
-The compressed png:
+The compressed PNG:
 
-<img alt="compressed png" src="./compressed.png" />
+<img alt="compressed PNG" src="./compressed.PNG" />
 
-And the webp (best viewed in Chrome/Firefox):
+And the WEBP (best viewed in Chrome/Firefox):
 
-<img alt="compressed webp" src="./compressed.webp" />
+<img alt="compressed WEBP" src="./compressed.WEBP" />
 
 To my (near-sighted) eyes, the three are identical.
 We did it!
 
 ## Scaling up
 
-So far we've converted 1/2000 images.
-While we _could_ type out the command for all of the 2000, some would say that this isn't the best use of our time, and I would tend to agree.
-Instead, we're going to rely on two CLI tools: `find` and `xargs`.
+So far we've converted one out of 2000 images.
+While we _could_ type out the command for the remaining 1999, some would say that this isn't the best use of our time, and I would tend to agree.
+Instead, we're going to rely on two classic CLI tools: `find` and `xargs`.
 
 To get started, I'm going to make a copy of the directory containing my source images:
 
@@ -163,43 +161,46 @@ To get started, I'm going to make a copy of the directory containing my source i
 $ cp -R originals/ compressed/
 ```
 
-Now, we're going to use some `find`/`xarg` magic with our previous `mogrify` command to convert all the images in the `compressed/` directory to `webp`:
+Next, I'm going to use some find/xarg magic with our previous mogrify command to convert all the images in the `compressed/` directory to WEBP:
 
 ```bash
 $ NUM_CORES="$(getconf _NPROCESSORS_ONLN)"
-$ find compressed/ -iname "*.png" -print0 | \
+$ find compressed/ -iname "*.PNG" -print0 | \
   xargs -0 -n 1 -P $NUM_CORES \
-  mogrify -format webp
+  mogrify -format WEBP
 ```
 
 Let's break down the second command line by line.
 
-We start by grabbing making a list of all the png files in the `compressed/` directory:
+We start by grabbing making a list of all the PNG files in the `compressed/` directory:
 
 ```
-find compressed/ -iname "*.png" -print0
+find compressed/ -iname "*.PNG" -print0
 ```
 
-- The `-print0` flag tells `find` to output a `null`-delimited list of strings, instead of a newline-delimited list.
-  This allows `find` to handle filenames that contain newlines.
+- The `-print0` flag tells find to output a null-delimited list of strings, instead of a newline-delimited list.
+  This allows find to handle filenames that contain newlines.
 
-The output of `find` - our list of png files - is then piped into `xargs`:
+The output of find - our list of PNG files - is then piped into xargs:
 
 ```
 xargs -0 -n 1 -P $NUM_CORES \
-mogrify -format webp
+mogrify -format WEBP
 ```
 
-- `-0` matches the `-print0` option of `find`, telling `xargs` to expect a null byte as a delimiter
-- `-n 1` tells `xargs` to pair exactly one filename to each command.
-  If you want to run a command that can accept an arbitrary number files as an argument and has a non-negligible startup time, increasing this number will speed up the overall execution time.
-  Since `mogrify` only takes one file as an argument, we have to specify one filename at a time here.
-- `-P $NUM_CORES` tells `xargs` to use all the cores of our machine (eight, in my case).
+- `-0` matches the `-print0` option of find, telling xargs to expect a null byte as a delimiter
+- `-n 1` tells xargs to pair exactly one filename to each command.
+  For example, if we set `-n 2`, then the executed command would be `mogrify -format webp file1.PNG file2.PNG`.
+
+  If you're running a command that can accept an arbitrary number files as an argument and has a non-negligible startup time, increasing this number will speed up the overall execution time.
+  Since mogrify only takes one file as an argument, we have to specify one filename at a time here.
+
+- `-P $NUM_CORES` tells xargs to use all the cores of our machine (eight, in my case).
   Note that the `$NUM_CORES` was set in a previous line to the value of `getconf _NPROCESSORS_ONLN`.
 
-For my folder of 2000 (small) images, it took six seconds to convert them all to webp.
+For my folder of 2000 (small) images, it took six seconds to convert them all to WEBP.
 
-Next up is the png compression.
+Next up is the PNG compression.
 While `imageoptim` _does_ take an arbitrary number of arguments as input, trying to execute it on all 2000 images caused it to hang when I tried.
 Instead, we'll reuse our previous command, with two changes:
 
@@ -209,13 +210,13 @@ Instead, we'll reuse our previous command, with two changes:
 
 ```
 $ NUM_CORES="$(getconf _NPROCESSORS_ONLN)"
-$ find compressed/ -iname "*.png" -print0 | \
+$ find compressed/ -iname "*.PNG" -print0 | \
   xargs -0 -n 20 \
   imageoptim --imagealpha --quality 50
 ```
 
-This step took considerably longer than the webp conversion - over twelve minutes on my computer.
-Once it's completed, though, you'll have a directory full of trim, beautifully compressed pngs and webps!
+This step took considerably longer than the WEBP conversion - over twelve minutes on my computer.
+Once it's completed, though, you'll have a directory full of svelte PNGs and WEBPs!
 What next?
 
 ## Hosting our images
@@ -225,17 +226,18 @@ We're going to be using Amazon S3 for this.
 There are two prerequisites:
 
 - [An activated AWS account](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/) (you'll need your key id and secret key ready at hand)
-- [The AWS cli](https://aws.amazon.com/cli/)
+- [The AWS CLI](https://aws.amazon.com/cli/)
 
-First, configure the aws cli by running:
+First, configure the AWS CLI with
 
 ```bash
 $ aws configure
 ```
 
-This will prompt you to enter your account key id and secret key, and save us from having to reenter them at every stem.
-Now let's create a new S3 bucket.
-For this article, we'll call the bucket `image-optimization-blog-post`.
+This will prompt you to enter your account key id and secret key and will automatically authenticate us for the following commands.
+
+Next, let's create a new S3 bucket.
+For this article, we'll use a bucket named `image-optimization-blog-post`.
 
 ```bash
 $ BUCKET_NAME=image-optimization-blog-post
@@ -262,23 +264,23 @@ $ cat policy.json
 }
 ```
 
-Make sure to fill in the value of `$BUCKET_NAME` in the resource line.
-Now, let's apply the policy to our bucket:
+Make sure to fill in the value of `$BUCKET_NAME` in the "Resource" line.
+Now, let's apply the policy to our newly-created bucket:
 
 ```bash
 $ POLICY_PATH=$(realpath policy.json)
 $ aws s3api put-bucket-policy --bucket $BUCKET_NAME --policy file://$POLICY_PATH
 ```
 
-Let's upload our images!
-I'm going to put all the images in the `compressed` folder we created earlier into the `assets/images/` folder of our bucket.
-We'll run with the `--dryrun` option to make sure that everything looks okay:
+Time to upload our images!
+I'm going to sync the `compressed/` folder we created earlier to the `assets/images/` folder of our bucket.
+We'll start with a dryrun to make sure that everything looks okay:
 
 ```bash
 $ PUBLIC_PATH=assets/images
 $ aws s3 sync compressed/ s3://$BUCKET_NAME/$PUBLIC_PATH --dryrun
-(dryrun) upload: compressed/ROT_114.png to s3://image-optimization-blog-post/ROT_114.png
-(dryrun) upload: compressed/ROT_114.webp to s3://image-optimization-blog-post/ROT_114.webp
+(dryrun) upload: compressed/ROT_114.PNG to s3://image-optimization-blog-post/ROT_114.PNG
+(dryrun) upload: compressed/ROT_114.WEBP to s3://image-optimization-blog-post/ROT_114.WEBP
 ...
 ```
 
@@ -287,8 +289,8 @@ Once you're satisfied of the result, we'll rerun the previous command without `-
 
 ```bash
 $ aws s3 sync compressed/ s3://$BUCKET_NAME/$PUBLIC_PATH
-upload: compressed/ROT_114.webp to s3://image-optimization-blog-post/assets/images/ROT_114.webp
-upload: compressed/ROT_114.webp to s3://image-optimization-blog-post/assets/images/ROT_114.webp
+upload: compressed/ROT_114.WEBP to s3://image-optimization-blog-post/assets/images/ROT_114.WEBP
+upload: compressed/ROT_114.WEBP to s3://image-optimization-blog-post/assets/images/ROT_114.WEBP
 ...
 ```
 
@@ -313,7 +315,7 @@ Here's a list of improvements we could have implemented throughout workflow, in 
   While that's very convenient, it's not always a possibility.
   Due to security policies or the number of images involved, it might be necessary to `ssh` in to the machine where the images reside and run your commands there.
 - We used [ImageOptim](https://imageoptim.com/mac) to compress our PNGs; however, ImageOptim is only available on OS X.
-  I _believe_ that ImageOptim uses [zopflipng](https://github.com/imagemin/zopflipng-bin) as the underlying compressor, so you could look into that if you're working in a Linux environment.
+  I _believe_ that ImageOptim uses [zopfliPNG](https://github.com/imagemin/zopfliPNG-bin) as the underlying compressor, so you could look into that if you're working in a Linux environment.
   This would likely be much faster than using ImageOptim, at the cost of more complicated setup and usage.
 - We used our own AWS account to interact with the image bucket.
   The best practice for AWS would have been to [create a separate IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html) that only has permissions for that bucket, and to do everything with that user's credentials.
