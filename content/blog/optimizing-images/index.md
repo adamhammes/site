@@ -80,10 +80,15 @@ In the previous section we decided that a `webp` image with a `png` fallback was
 To implement this logic, we're going to make use of the [picture element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture).
 Here's what our final product will (potentially) look like:
 
+<!-- prettier-ignore -->
 ```html
 <picture>
-  <source srcset="/tiles/TRL_128.webp" type="image/webp" />
-  <img alt="Regenerate" src="/tiles/TRL_128.png" />
+  <source
+    srcset="/TRL_128.webp"
+    type="image/webp" />
+  <img
+    alt="Regenerate"
+    src="/TRL_128.png" />
 </picture>
 ```
 
@@ -119,14 +124,13 @@ Here's an example for both the png and webp formats:
 
 ```bash
 $ cp original.png compressed.png
-$ imageoptim --imagealpha --quality 50 --no-stats compressed.png
+$ imageoptim --imagealpha --quality 50 compressed.png
 $ mogrify -format webp original.png
 $ mv original.webp compressed.webp
 $ ls -lh
-total 56
--rw-r--r--  1 ahammes  staff   4.9K Jun  1 23:23 compressed.png
--rw-r--r--  1 ahammes  staff   2.6K Jun  1 23:23 compressed.webp
--rw-r--r--@ 1 ahammes  staff    16K Jun  1 23:14 original.png
+4.9K compressed.png
+2.6K compressed.webp
+16K  original.png
 ```
 
 A 69% savings for the compressed png and 84% for the webp.
@@ -273,8 +277,9 @@ We'll run with the `--dryrun` option to make sure that everything looks okay:
 ```bash
 $ PUBLIC_PATH=assets/images
 $ aws s3 sync compressed/ s3://$BUCKET_NAME/$PUBLIC_PATH --dryrun
-(dryrun) upload: compressed/ff907dfd8334896b241b85c972240eff0bb081f5.png to s3://image-optimization-blog-post/ff907dfd8334896b241b85c972240eff0bb081f5.png
-(dryrun) upload: compressed/ff907dfd8334896b241b85c972240eff0bb081f5.webp to s3://image-optimization-blog-post/ff907dfd8334896b241b85c972240eff0bb081f5.webp
+(dryrun) upload: compressed/ROT_114.png to s3://image-optimization-blog-post/ROT_114.png
+(dryrun) upload: compressed/ROT_114.webp to s3://image-optimization-blog-post/ROT_114.webp
+...
 ```
 
 Check over the output carefully to make sure everything is getting put where it's supposed to.
@@ -282,8 +287,9 @@ Once you're satisfied of the result, we'll rerun the previous command without `-
 
 ```bash
 $ aws s3 sync compressed/ s3://$BUCKET_NAME/$PUBLIC_PATH
-upload: compressed/ffac2bcbcfc50b3cc47027c7193a11dfbf51fbe8.webp to s3://image-optimization-blog-post/assets/images/ffac2bcbcfc50b3cc47027c7193a11dfbf51fbe8.webp
-upload: compressed/ff64c8d0c7a20b5657476f5c04e2ad79830ed206.webp to s3://image-optimization-blog-post/assets/images/ff64c8d0c7a20b5657476f5c04e2ad79830ed206.webp
+upload: compressed/ROT_114.webp to s3://image-optimization-blog-post/assets/images/ROT_114.webp
+upload: compressed/ROT_114.webp to s3://image-optimization-blog-post/assets/images/ROT_114.webp
+...
 ```
 
 Let's open one of our images to make sure that everything went well:
