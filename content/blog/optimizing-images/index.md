@@ -67,7 +67,7 @@ And finally, `webp` is always preferred.
 
 This might seem a little abstract, so let's walk through these rules using our example image from earlier:
 
-![Card image from earlier](./example-raw-image.png)
+![Card image from earlier](./original.png)
 
 1. I support Safari (you probably do too!), so we're going to need a `jpeg` or `png` fallback in addition to `webp`.
 1. The image is fairly complex visually, which would normally indicate `jpeg`; however, the left part of the image contains a transparent gradient, so we have to use `png`.
