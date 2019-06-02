@@ -21,7 +21,7 @@ html {
   color: hsla(0, 0%, 0%, 0.9);
   font-weight: 400;
   word-wrap: break-word;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 /* Sections
@@ -414,4 +414,8 @@ ul,
 ol {
   padding: 0 0 0 var(--rhythm);
   margin: 0 0 var(--rhythm);
+}
+
+li {
+  margin-bottom: calc(0.25 * var(--rhythm));
 }

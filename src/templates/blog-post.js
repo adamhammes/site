@@ -18,7 +18,10 @@ class BlogPostTemplate extends React.Component {
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <h1>{post.frontmatter.title}</h1>
         <p>{post.frontmatter.date}</p>
-        <article dangerouslySetInnerHTML={{ __html: post.html }} />
+        <article
+          class={styles.markdown}
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
         <hr />
         <Bio />
 

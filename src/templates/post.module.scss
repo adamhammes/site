@@ -1,3 +1,16 @@
+.markdown {
+  :global {
+    .gatsby-resp-image-link {
+      box-shadow: none;
+      margin: calc(2 * var(--rhythm)) 0;
+    }
+
+    .gatsby-highlight {
+      margin: calc(2 * var(--rhythm)) 0;
+    }
+  }
+}
+
 .extraLinks {
   list-style-type: none;
   padding: 0;
