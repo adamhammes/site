@@ -326,3 +326,8 @@ Here's a list of improvements we could have implemented throughout workflow, in 
 
   Whenever you update the files, their filename will change to reflect their new contents.
   This allows instant cache validation and is the reason we can use such a long cache policy in the second step.
+
+## Conclusion
+
+You have now officially finished my image pipeline guide.
+Thanks for sticking through to the end, and I hope you learned something!
