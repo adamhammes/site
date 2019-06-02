@@ -402,6 +402,6 @@ ol {
   margin: 0 0 var(--rhythm);
 }
 
-li {
+li:not(:last-of-type) {
   margin-bottom: calc(0.25 * var(--rhythm));
 }

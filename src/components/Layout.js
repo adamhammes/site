@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import './normalize.scss'
+import '../global-styles/normalize.scss'
 import '../global-styles/prism-theme.scss'
+
 import styles from './layout.module.scss'
 
 class Layout extends React.Component {
