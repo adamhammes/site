@@ -388,20 +388,6 @@ a {
   }
 }
 
-a.anchor {
-  box-shadow: none;
-  position: absolute;
-  top: 0;
-  right: calc(100% + calc(0.33 * var(--rhythm)));
-  height: 100%;
-
-  display: flex;
-  align-items: center;
-
-  margin: 0;
-  padding: 0;
-}
-
 hr {
   margin: var(--rhythm) 0;
   padding: 0;
