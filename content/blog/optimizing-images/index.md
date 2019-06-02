@@ -25,7 +25,7 @@ description: >
 For the last few weeks I've been working on a website that contains many small images.
 Here is an example page:
 
-![A screenshot of the final product](./introduction-example-page.png)
+![A screenshot of the final project](./image-optimization-introduction.png)
 
 And here's a closeup of an individual image:
 
