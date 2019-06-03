@@ -5,7 +5,7 @@ draft: false
 description: >
   Working with images is a common occurrence in the life of a frontend
   developer. This article discusses optimization techniques and hosting
-  methods, with a healthy dose of Bash mixed in.
+  methods, with a healthy dose of shell-fu mixed in.
 ---
 
 ## Table of Contents
