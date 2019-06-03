@@ -136,7 +136,7 @@ Wow!
 Now, a comparison of image quality.
 Here is the original image:
 
-<img alt="original png src="./original.png" />
+<img alt="original png" src="./original.png" />
 
 The compressed PNG:
 
