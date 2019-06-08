@@ -1,5 +1,5 @@
 ---
-title: 'Creating an Image Pipeline'
+title: "Creating an Image Pipeline"
 date: 2019-06-01T20:40:53-04:00
 draft: false
 description: >

@@ -3,17 +3,16 @@ draft: false
 date: "2016-12-24T13:28:25-05:00"
 title: "Butter Frosting"
 description: "Simple, yet delicious vanilla frosting."
-
 ---
 
 ## Ingredients
 
-* 6 tbsp butter
-* 4 1/2 cups sifted confectioners' sugar (approximate)
-* 1/4 cup milk
-* 1 tsp vanilla extract
-* 1/2 tsp almond extract
-* Food coloring (optional)
+- 6 tbsp butter
+- 4 1/2 cups sifted confectioners' sugar (approximate)
+- 1/4 cup milk
+- 1 tsp vanilla extract
+- 1/2 tsp almond extract
+- Food coloring (optional)
 
 ## Directions
 
