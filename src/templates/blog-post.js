@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby'
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
+import { formatCalendarDate } from "../utils";
 
 import styles from './post.module.scss'
 
@@ -12,6 +13,7 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
+    const publishDate = post.frontmatter.date;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -20,7 +22,7 @@ class BlogPostTemplate extends React.Component {
           description={post.frontmatter.description}
         />
         <h1>{post.frontmatter.title}</h1>
-        <p>{post.frontmatter.date}</p>
+        <time datetime={publishDate}>{formatCalendarDate(publishDate)}</time>
         <p>{post.frontmatter.description}</p>
         <article
           className={styles.markdown}
