@@ -1,20 +1,20 @@
-import React from 'react'
-import { Link, graphql } from 'gatsby'
+import React from "react";
+import { Link, graphql } from "gatsby";
 
-import Bio from '../components/Bio'
-import Layout from '../components/Layout'
-import SEO from '../components/seo'
+import Bio from "../components/Bio";
+import Layout from "../components/Layout";
+import SEO from "../components/seo";
 
 class BlogIndex extends React.Component {
   render() {
-    const siteTitle = this.props.data.site.siteMetadata.title
+    const siteTitle = this.props.data.site.siteMetadata.title;
 
     const bio = (
       <>
         <strong>Adam Hammes</strong> is a developer, dancer, and extremely
         amateur cook.
       </>
-    )
+    );
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -35,11 +35,11 @@ class BlogIndex extends React.Component {
           </li>
         </ul>
       </Layout>
-    )
+    );
   }
 }
 
-export default BlogIndex
+export default BlogIndex;
 
 export const pageQuery = graphql`
   query {
@@ -49,4 +49,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

@@ -1,19 +1,19 @@
-import React from 'react'
-import { Link, graphql } from 'gatsby'
+import React from "react";
+import { Link, graphql } from "gatsby";
 
-import Bio from '../components/Bio'
-import Layout from '../components/Layout'
-import SEO from '../components/seo'
+import Bio from "../components/Bio";
+import Layout from "../components/Layout";
+import SEO from "../components/seo";
 import { formatCalendarDate } from "../utils";
 
-import styles from './post.module.scss'
+import styles from "./post.module.scss";
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark
-    const siteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
+    const post = this.props.data.markdownRemark;
     const publishDate = post.frontmatter.date;
+    const siteTitle = this.props.data.site.siteMetadata.title;
+    const { previous, next } = this.props.pageContext;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -50,11 +50,11 @@ class BlogPostTemplate extends React.Component {
           </ul>
         )}
       </Layout>
-    )
+    );
   }
 }
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -69,9 +69,9 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date
         description
       }
     }
   }
-`
+`;

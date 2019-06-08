@@ -1,8 +1,8 @@
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import Image from 'gatsby-image'
+import React from "react";
+import { StaticQuery, graphql } from "gatsby";
+import Image from "gatsby-image";
 
-import styles from './bio.module.scss'
+import styles from "./bio.module.scss";
 
 function Bio(props) {
   const tagline = props.text || (
@@ -10,13 +10,13 @@ function Bio(props) {
       Written by <strong>Adam Hammes</strong>, a Yankee living and working in
       Québec.
     </>
-  )
+  );
 
   return (
     <StaticQuery
       query={bioQuery}
       render={data => {
-        const { author } = data.site.siteMetadata
+        const { author } = data.site.siteMetadata;
         return (
           <div className={styles.bioContainer}>
             <Image
@@ -26,10 +26,10 @@ function Bio(props) {
             />
             <p>{tagline}</p>
           </div>
-        )
+        );
       }}
     />
-  )
+  );
 }
 
 const bioQuery = graphql`
@@ -47,6 +47,6 @@ const bioQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default Bio
+export default Bio;
