@@ -2,9 +2,9 @@ import React from "react";
 import { Link, graphql } from "gatsby";
 
 import Bio from "../components/Bio";
+import DateTime from "../components/DateTime";
 import Layout from "../components/Layout";
 import SEO from "../components/seo";
-import { formatCalendarDate } from "../utils";
 
 import styles from "./post.module.scss";
 
@@ -23,7 +23,7 @@ class BlogPostTemplate extends React.Component {
         />
         <main>
           <h1>{post.frontmatter.title}</h1>
-          <time dateTime={publishDate}>{formatCalendarDate(publishDate)}</time>
+          <DateTime dateString={publishDate} />
           <p>{post.frontmatter.description}</p>
           <article
             className={styles.markdown}

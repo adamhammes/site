@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 
-import Bio from "../components/Bio";
+import DateTime from "../components/DateTime";
 import Layout from "../components/Layout";
 import SEO from "../components/seo";
 
@@ -27,7 +27,7 @@ class RecipesIndex extends React.Component {
                 <h2>
                   <Link to={node.fields.slug}>{title}</Link>
                 </h2>
-                {node.frontmatter.date}
+                <DateTime dateString={node.frontmatter.date} />
                 <p>{node.frontmatter.description}</p>
               </article>
             );
@@ -58,7 +58,7 @@ export const pageQuery = graphql`
             listing
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date
             title
             description
           }
