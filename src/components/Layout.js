@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 
 import "../global-styles/normalize.scss";
-import "../global-styles/prism-theme.scss";
+import "../global-styles/code-style.scss";
 
 import styles from "./layout.module.scss";
 
