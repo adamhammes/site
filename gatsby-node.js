@@ -6,6 +6,8 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const blogPost = path.resolve(`./src/templates/blog-post.js`);
+    const defaultMarkdown = path.resolve(`./src/templates/default-markdown.js`);
+
     resolve(
       graphql(
         `
@@ -40,7 +42,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         sections.forEach(sectionName => {
           const posts = allPosts.filter(
-            post => post.node.fields.listing === sectionName
+            post => post.node.fields && post.node.fields.listing === sectionName
           );
 
           posts.forEach((post, index) => {
@@ -59,6 +61,19 @@ exports.createPages = ({ graphql, actions }) => {
             });
           });
         });
+
+        // All other markdown pages
+        allPosts
+          .filter(p => p.node.fields.listing === "")
+          .forEach(post => {
+            createPage({
+              path: post.node.fields.slug,
+              component: defaultMarkdown,
+              context: {
+                slug: post.node.fields.slug,
+              },
+            });
+          });
       })
     );
   });
@@ -68,28 +83,26 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
   if (node.internal.type === `MarkdownRemark`) {
-    const pathParts = node.fileAbsolutePath.split(path.sep);
-    pathParts.reverse();
+    const relativePath = path.relative(__dirname, node.fileAbsolutePath);
+    console.log(relativePath);
 
-    let dirName;
-    if (pathParts[0] === "index.md") {
-      dirName = pathParts[2];
-    } else {
-      dirName = pathParts[1];
+    let listing = "";
+    if (relativePath.startsWith(path.join("content", "recipes"))) {
+      listing = "recipes";
+    } else if (relativePath.startsWith(path.join("content", "blog"))) {
+      listing = "blog";
     }
-
-    const fileName = createFilePath({ node, getNode });
 
     createNodeField({
       name: `slug`,
       node,
-      value: `${dirName}${fileName}`,
+      value: createFilePath({ node, getNode }),
     });
 
     createNodeField({
       name: `listing`,
       node,
-      value: dirName,
+      value: listing,
     });
   }
 };
