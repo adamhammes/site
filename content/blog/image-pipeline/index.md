@@ -18,7 +18,7 @@ description: >
 1. [Scaling up](#scaling-up)
 1. [Hosting](#hosting-our-images)
 1. [Potential improvements](#potential-improvements)
-1. [Conclusion](#conclustion)
+1. [Conclusion](#conclusion)
 
 ## Presentation of the problem
 
