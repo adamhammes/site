@@ -1,12 +1,16 @@
 .header {
   margin-top: var(--rhythm);
-  font-family: var(--sans-serif-font-stack);
-  font-size: var(--rhythm);
-  font-weight: bold;
   margin-bottom: var(--rhythm);
 
   a {
+    font-family: var(--sans-serif-font-stack);
+    font-size: var(--rhythm);
+    font-weight: bold;
     box-shadow: none;
     color: inherit;
+  }
+
+  [class^="bio-module--bioContainer"] {
+    margin-top: var(--rhythm);
   }
 }

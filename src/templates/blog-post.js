@@ -21,34 +21,38 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description}
         />
-        <h1>{post.frontmatter.title}</h1>
-        <time datetime={publishDate}>{formatCalendarDate(publishDate)}</time>
-        <p>{post.frontmatter.description}</p>
-        <article
-          className={styles.markdown}
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
+        <main>
+          <h1>{post.frontmatter.title}</h1>
+          <time dateTime={publishDate}>{formatCalendarDate(publishDate)}</time>
+          <p>{post.frontmatter.description}</p>
+          <article
+            className={styles.markdown}
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
+        </main>
         <hr />
-        <Bio />
+        <footer>
+          <Bio />
 
-        {(previous || next) && (
-          <ul className={styles.extraLinks}>
-            {previous && (
-              <li>
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
-                </Link>
-              </li>
-            )}
-            {next && (
-              <li>
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              </li>
-            )}
-          </ul>
-        )}
+          {(previous || next) && (
+            <ul className={styles.extraLinks}>
+              {previous && (
+                <li>
+                  <Link to={previous.fields.slug} rel="prev">
+                    ← {previous.frontmatter.title}
+                  </Link>
+                </li>
+              )}
+              {next && (
+                <li>
+                  <Link to={next.fields.slug} rel="next">
+                    {next.frontmatter.title} →
+                  </Link>
+                </li>
+              )}
+            </ul>
+          )}
+        </footer>
       </Layout>
     );
   }
