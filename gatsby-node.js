@@ -84,7 +84,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   if (node.internal.type === `MarkdownRemark`) {
     const relativePath = path.relative(__dirname, node.fileAbsolutePath);
-    console.log(relativePath);
 
     let listing = "";
     if (relativePath.startsWith(path.join("content", "recipes"))) {

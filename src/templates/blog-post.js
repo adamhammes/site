@@ -4,7 +4,6 @@ import { Link, graphql } from "gatsby";
 import Bio from "../components/Bio";
 import DateTime from "../components/DateTime";
 import Layout from "../components/Layout";
-import SEO from "../components/seo";
 
 import styles from "./post.module.scss";
 
@@ -12,15 +11,15 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;
     const publishDate = post.frontmatter.date;
-    const siteTitle = this.props.data.site.siteMetadata.title;
+    const title = post.frontmatter.title;
     const { previous, next } = this.props.pageContext;
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title={post.frontmatter.title}
-          description={post.frontmatter.description}
-        />
+      <Layout
+        title={title}
+        location={this.props.location}
+        description={post.frontmatter.description}
+      >
         <main>
           <h1>{post.frontmatter.title}</h1>
           <DateTime dateString={publishDate} />

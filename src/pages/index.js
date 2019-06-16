@@ -2,15 +2,13 @@ import React from "react";
 import { Link, graphql } from "gatsby";
 
 import Layout from "../components/Layout";
-import SEO from "../components/seo";
 
 class BlogIndex extends React.Component {
   render() {
-    const siteTitle = this.props.data.site.siteMetadata.title;
+    const title = "Home";
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="Home" />
+      <Layout location={this.props.location} title={title}>
         <main>
           <h1>Hi! I'm Adam Hammes.</h1>
           <p>

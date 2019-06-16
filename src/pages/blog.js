@@ -3,21 +3,15 @@ import { Link, graphql } from "gatsby";
 
 import DateTime from "../components/DateTime";
 import Layout from "../components/Layout";
-import SEO from "../components/seo";
 
 class RecipesIndex extends React.Component {
   render() {
     const { data } = this.props;
-    const siteTitle = data.site.siteMetadata.title;
+    const title = "Blog Posts";
     const posts = data.allMarkdownRemark ? data.allMarkdownRemark.edges : [];
 
     return (
-      <Layout
-        location={this.props.location}
-        title={siteTitle}
-        bioInHeader={true}
-      >
-        <SEO title="All posts" />
+      <Layout location={this.props.location} title={title} bioInHeader={true}>
         <main>
           <h1>Blog Posts</h1>
           {posts.map(({ node }) => {
