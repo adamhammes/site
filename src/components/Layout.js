@@ -9,25 +9,23 @@ import Seo from "./seo";
 import Bio from "./Bio.js";
 import styles from "./layout.module.scss";
 
-class Layout extends React.Component {
-  render() {
-    const { children, bioInHeader } = this.props;
+const Layout = props => {
+  const { children, bioInHeader } = props;
 
-    const header = (
-      <header className={styles.header}>
-        <Link to={`/`}>hammes.io/</Link>
-        {bioInHeader && <Bio />}
-      </header>
-    );
+  const header = (
+    <header className={styles.header}>
+      <Link to={`/`}>hammes.io/</Link>
+      {bioInHeader && <Bio />}
+    </header>
+  );
 
-    return (
-      <>
-        <Seo {...this.props} />
-        {header}
-        {children}
-      </>
-    );
-  }
-}
+  return (
+    <>
+      <Seo {...props} />
+      {header}
+      {children}
+    </>
+  );
+};
 
 export default Layout;
