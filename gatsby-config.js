@@ -13,6 +13,17 @@ module.exports = {
         name: `assets`,
       },
     },
+    // Add a collection called "posts" that looks
+    // for files in content/posts/
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "posts",
+        path: `${__dirname}/content/`,
+      },
+    },
+    // Add support for *.mdx files in gatsby
+    "gatsby-mdx",
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
