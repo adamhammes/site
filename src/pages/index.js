@@ -33,7 +33,7 @@ class BlogIndex extends React.Component {
               my site.
             </li>
             <li>
-              <a to="https://alacarte.hammes.io">À la carte</a>, a tool for
+              <a href="https://alacarte.hammes.io">À la carte</a>, a tool for
               searching for apartments in Québec
             </li>
           </ul>
