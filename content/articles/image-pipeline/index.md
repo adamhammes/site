@@ -136,15 +136,15 @@ Wow!
 Now, a comparison of image quality.
 Here is the original image:
 
-<img alt="original png" src="./original.png" />
+![original png](./original.png)
 
 The compressed PNG:
 
-<img alt="compressed png" src="./compressed.png" />
+![compressed png](./compressed.png)
 
 And the WEBP (best viewed in Chrome/Firefox):
 
-<img alt="compressed webp" src="./compressed.webp" />
+![compressed webp](./compressed.webp)
 
 To my (near-sighted) eyes, the three are identical.
 We did it!
