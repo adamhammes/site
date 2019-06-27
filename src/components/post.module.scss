@@ -28,6 +28,24 @@
 
     a.anchor {
       box-shadow: none;
+      float: left;
+      padding-right: 4px;
+      margin-left: -20px;
+
+      svg {
+        visibility: hidden;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      &:hover a.anchor svg {
+        visibility: visible;
+      }
     }
 
     blockquote {
