@@ -51,8 +51,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
     const listing =
       siteListings.find(listing => slug.includes(`/${listing}/`)) || "";
-    console.log(slug);
-    console.log(listing);
 
     createNodeField({
       name: "slug",
