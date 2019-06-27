@@ -26,7 +26,7 @@ class BlogIndex extends React.Component {
           <h2>Links:</h2>
           <ul>
             <li>
-              <Link to="/blog">My written articles</Link>
+              <Link to="/articles">My written articles</Link>
             </li>
             <li>
               <Link to="/recipes">All the recipes</Link> I've cared to save on

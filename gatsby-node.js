@@ -1,6 +1,8 @@
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
+const siteListings = ["articles", "recipes"];
+
 exports.createPages = ({ graphql, actions }) => {
   // Destructure the createPage function from the actions object
   const { createPage } = actions;
@@ -45,12 +47,23 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
   if (node.internal.type === "Mdx") {
-    const value = createFilePath({ node, getNode });
+    const slug = createFilePath({ node, getNode });
+
+    const listing =
+      siteListings.find(listing => slug.includes(`/${listing}/`)) || "";
+    console.log(slug);
+    console.log(listing);
 
     createNodeField({
       name: "slug",
       node,
-      value,
+      value: slug,
+    });
+
+    createNodeField({
+      name: "listing",
+      node,
+      value: listing,
     });
   }
 };
