@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby";
 
 import Layout from "../components/Layout";
 
-class BlogIndex extends React.Component {
+class IndexPage extends React.Component {
   render() {
     const title = "Home";
 
@@ -43,7 +43,7 @@ class BlogIndex extends React.Component {
   }
 }
 
-export default BlogIndex;
+export default IndexPage;
 
 export const pageQuery = graphql`
   query {
