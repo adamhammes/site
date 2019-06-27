@@ -7,7 +7,7 @@ import styles from "./post.module.scss";
 
 export default function PostTemplate({ data: { mdx } }) {
   return (
-    <Layout title="">
+    <Layout title={mdx.frontmatter.title}>
       <main className={styles.markdown}>
         <h1>{mdx.frontmatter.title}</h1>
         <MDXRenderer>{mdx.code.body}</MDXRenderer>
