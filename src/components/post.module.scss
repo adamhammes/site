@@ -1,0 +1,58 @@
+.markdown {
+  :global {
+    .gatsby-resp-image-link {
+      box-shadow: none;
+      margin: calc(2 * var(--rhythm)) 0;
+    }
+
+    pre {
+      margin: calc(2 * var(--rhythm)) 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a,
+    .js-anchor-link-target {
+      &[name]::before,
+      &[id]::before {
+        content: "";
+        display: block;
+        height: 20px;
+        margin: -20px 0 0;
+      }
+    }
+
+    a.anchor {
+      box-shadow: none;
+    }
+
+    blockquote {
+      margin: 0 0 0 var(--rhythm);
+      padding: calc(0.5 * var(--rhythm)) var(--rhythm);
+      background: var(--background-highlight-color);
+
+      border-left: 3px solid var(--primary-color);
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.extraLinks {
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    margin: 0 0 var(--rhythm);
+  }
+
+  :nth-child(2) {
+    text-align: right;
+  }
+}
