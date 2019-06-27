@@ -7,22 +7,12 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
-      },
-    },
-    // Add a collection called "posts" that looks
-    // for files in content/posts/
-    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "posts",
         path: `${__dirname}/content/`,
       },
     },
-    // Add support for *.mdx files in gatsby
     {
       resolve: "gatsby-mdx",
       options: {
