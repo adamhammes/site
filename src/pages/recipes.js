@@ -25,6 +25,7 @@ export const pageQuery = graphql`
             date
             title
             description
+            draft
           }
         }
       }
