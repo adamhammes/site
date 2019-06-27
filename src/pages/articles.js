@@ -3,8 +3,8 @@ import { graphql } from "gatsby";
 
 import Listing from "../components/listing";
 
-const Articles = ({ location, data }) => (
-  <Listing title="Articles" posts={data.allMdx.edges} location={location} />
+const Articles = ({ data }) => (
+  <Listing title="Articles" posts={data.allMdx.edges} />
 );
 
 export default Articles;

@@ -4,8 +4,8 @@ import { Link, graphql } from "gatsby";
 import DateTime from "../components/DateTime";
 import Layout from "../components/Layout";
 
-const Listing = ({ location, title, posts }) => (
-  <Layout location={location} title={title} bioInHeader={true}>
+const Listing = ({ title, posts }) => (
+  <Layout title={title} bioInHeader={true}>
     <main>
       <h1>{title}</h1>
       {posts.map(({ node }) => {
