@@ -20,11 +20,18 @@ const Layout = props => {
   );
 
   return (
-    <>
+    <div
+      style={{
+        maxWidth: "40rem",
+        margin: "auto",
+        width: "100%",
+        padding: "var(--rhythm)",
+      }}
+    >
       <Seo {...props} />
       {header}
       {children}
-    </>
+    </div>
   );
 };
 

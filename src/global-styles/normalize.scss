@@ -46,14 +46,8 @@ html {
  */
 
 body {
-  margin: 0 auto;
-  max-width: 40rem;
-  width: 100%;
-  padding: var(--rhythm);
-
-  @media print {
-    max-width: 8.5in;
-  }
+  margin: 0;
+  padding: 0;
 }
 
 /**
