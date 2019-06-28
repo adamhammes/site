@@ -1,0 +1,18 @@
+---
+draft: true
+skipLayout: true
+---
+
+import { windowedImages } from "../../../src/utils/css-grid-assets.js";
+
+<table className="css-grids--table">
+  <tbody>
+    {windowedImages.map((row, rowIndex) => (
+      <tr key={rowIndex}>
+        {row.map((image, index) => (
+          <td key={index}>{image}</td>
+        ))}
+      </tr>
+    ))}
+  </tbody>
+</table>

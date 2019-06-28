@@ -1,0 +1,18 @@
+---
+draft: true
+skipLayout: true
+---
+
+import { windowedImages } from "../../../src/utils/css-grid-assets.js";
+
+<div className="css-grids--float">
+  {windowedImages.map((row, rowIndex) => (
+    <div className="css-grids--float-row" key={rowIndex}>
+      {row.map((image, index) => (
+        <div className="css-grids--float-item" key={index}>
+          {image}
+        </div>
+      ))}
+    </div>
+  ))}
+</div>

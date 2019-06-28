@@ -2,9 +2,31 @@
 title: "CSS Grids Through the Ages"
 description: "TODO"
 date: 2019-06-26T20:40:53-04:00
-draft: true
+draft: false
+skipLayout: true
+withMarkdown: true
 ---
 
-<h1>Hello, world!</h1>
+import { Header } from "../../../src/components/Layout";
+import CssGridContainer from "../../../src/components/css-grid-container/css-grid-container";
+import "./css-grids.scss";
 
-<button>I'm a button.</button>
+<Header bioInHeader={false} />
+
+# CSS Grids Through the Ages
+
+First up is the venerable `table`:
+
+<CssGridContainer path="/articles/css-grids/table" />
+
+`float`
+
+<CssGridContainer path="/articles/css-grids/float" />
+
+`flex`
+
+<CssGridContainer path="/articles/css-grids/flex" />
+
+`grid`
+
+<CssGridContainer path="/articles/css-grids/grid" />

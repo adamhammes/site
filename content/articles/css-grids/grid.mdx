@@ -1,0 +1,12 @@
+---
+skipLayout: true
+draft: true
+---
+
+import { images } from "../../../src/utils/css-grid-assets.js";
+
+<ul class="css-grids--grid">
+  {images.map((image, index) => (
+    <li key={index}>{image}</li>
+  ))}
+</ul>

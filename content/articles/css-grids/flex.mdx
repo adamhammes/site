@@ -1,0 +1,14 @@
+---
+skipLayout: true
+draft: true
+---
+
+import { images } from "../../../src/utils/css-grid-assets.js";
+
+<div className="css-grids--flex-outer">
+  <ul className="css-grids--flex">
+    {images.map((image, index) => (
+      <li key={index}>{image}</li>
+    ))}
+  </ul>
+</div>

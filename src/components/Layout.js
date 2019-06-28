@@ -9,15 +9,15 @@ import Seo from "./seo";
 import Bio from "./Bio.js";
 import styles from "./layout.module.scss";
 
+const Header = ({ bioInHeader }) => (
+  <header className={styles.header}>
+    <Link to={`/`}>hammes.io/</Link>
+    {bioInHeader && <Bio />}
+  </header>
+);
+
 const Layout = props => {
   const { children, bioInHeader } = props;
-
-  const header = (
-    <header className={styles.header}>
-      <Link to={`/`}>hammes.io/</Link>
-      {bioInHeader && <Bio />}
-    </header>
-  );
 
   return (
     <div
@@ -29,10 +29,11 @@ const Layout = props => {
       }}
     >
       <Seo {...props} />
-      {header}
+      <Header bioInHeader={bioInHeader} />
       {children}
     </div>
   );
 };
 
 export default Layout;
+export { Header };

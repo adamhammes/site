@@ -12,8 +12,13 @@ export default function PostTemplate({ data: { mdx } }) {
     .join("-");
 
   if (mdx.frontmatter.skipLayout === true) {
+    let className = mainClass;
+    if (mdx.frontmatter.withMarkdown) {
+      className += ` ${styles.markdown}`;
+    }
+
     return (
-      <main className={mainClass}>
+      <main className={className}>
         <MDXRenderer>{mdx.code.body}</MDXRenderer>
       </main>
     );
@@ -38,6 +43,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         skipLayout
+        withMarkdown
       }
       fields {
         slug
