@@ -6,6 +6,19 @@ import Bio from "./Bio";
 import styles from "./post.module.scss";
 
 export default function PostTemplate({ data: { mdx } }) {
+  let mainClass = mdx.fields.slug
+    .split("/")
+    .filter(Boolean)
+    .join("-");
+
+  if (mdx.frontmatter.skipLayout === true) {
+    return (
+      <main className={mainClass}>
+        <MDXRenderer>{mdx.code.body}</MDXRenderer>
+      </main>
+    );
+  }
+
   return (
     <Layout title={mdx.frontmatter.title}>
       <main className={styles.markdown}>
@@ -24,6 +37,10 @@ export const pageQuery = graphql`
       id
       frontmatter {
         title
+        skipLayout
+      }
+      fields {
+        slug
       }
       code {
         body
