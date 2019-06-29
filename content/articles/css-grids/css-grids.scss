@@ -73,8 +73,11 @@
 }
 
 main.articles-css-grids-table {
+  --grid-spacing: 1rem;
+
   .css-grids--table {
-    border-spacing: 1rem;
+    border-spacing: var(--grid-spacing);
+    display: table;
   }
 
   @media screen and (max-width: 550px) {
@@ -87,15 +90,15 @@ main.articles-css-grids-table {
 }
 
 main.articles-css-grids-float {
-  --grid-spacing: 0.5rem;
-  padding: 0 var(--grid-spacing);
+  --grid-spacing: 1rem;
+  padding: 0 calc(0.5 * var(--grid-spacing));
 
   .css-grids--float-outer {
-    padding: var(--grid-spacing);
+    padding: calc(0.5 * var(--grid-spacing));
   }
 
   .css-grids--float {
-    margin: 0 calc(-1 * var(--grid-spacing));
+    margin: 0 calc(-0.5 * var(--grid-spacing));
   }
 
   .css-grids--float-row::after {
@@ -105,47 +108,47 @@ main.articles-css-grids-float {
   }
 
   .css-grids--float-item {
-    padding: var(--grid-spacing);
-    width: 33.3333%;
+    padding: calc(0.5 * var(--grid-spacing));
+    width: calc(100% / 3);
     float: left;
   }
 }
 
 main.articles-css-grids-flex {
-  --grid-spacing: 0.5rem;
+  --grid-spacing: 1rem;
 
   .css-grids--flex-outer {
-    padding: 0 var(--grid-spacing);
+    padding: 0 calc(0.5 * var(--grid-spacing));
   }
 
   .css-grids--flex {
     @include list-reset();
     display: flex;
     flex-wrap: wrap;
-    margin: calc(-1 * var(--grid-spacing));
+    margin: calc(-0.5 * var(--grid-spacing));
   }
 
   .css-grids--flex li {
-    padding: var(--grid-spacing);
+    padding: calc(0.5 * var(--grid-spacing));
 
     @media screen and (min-width: 550px) {
-      width: 50%;
+      width: calc(100% / 2);
     }
 
     @media screen and (min-width: 800px) {
-      width: 33.333333%;
+      width: calc(100% / 3);
     }
   }
 }
 
 main.articles-css-grids-grid {
-  --grid-spacing: 0.5rem;
-  padding: 0 var(--grid-spacing);
+  --grid-spacing: 1rem;
+  padding: 0 calc(0.5 * var(--grid-spacing));
 
   .css-grids--grid {
     @include list-reset();
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: calc(2 * var(--grid-spacing));
+    grid-gap: var(--grid-spacing);
   }
 }
