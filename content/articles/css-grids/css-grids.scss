@@ -55,6 +55,21 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  .iframe-resize-handle {
+    background: var(--primary-color);
+    height: 15vh !important;
+    top: 5vh !important;
+    border-radius: 5px;
+
+    &-left {
+      left: -10px !important;
+    }
+
+    &-right {
+      right: -10px !important;
+    }
+  }
 }
 
 main.articles-css-grids-table {
