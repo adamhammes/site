@@ -11,7 +11,7 @@ const CssGridContainer = ({ path }) => {
             resizeRatio={2}
             defaultSize={{ width: "100%", height: "100%" }}
             maxWidth="100%"
-            minWidth={320}
+            minWidth={250}
             enable={{ top: false, right: true, bottom: false, left: true }}
           >
             <iframe src={path} />
