@@ -25,8 +25,8 @@ export default function PostTemplate({ data: { mdx } }) {
   }
 
   return (
-    <Layout title={mdx.frontmatter.title}>
-      <main className={styles.markdown}>
+    <Layout {...mdx.frontmatter}>
+      <main className={`${styles.markdown} ${mainClass}`}>
         <h1>{mdx.frontmatter.title}</h1>
         <MDXRenderer>{mdx.code.body}</MDXRenderer>
       </main>
