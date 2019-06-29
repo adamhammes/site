@@ -8,20 +8,24 @@ const Listing = ({ title, posts }) => (
   <Layout title={title} bioInHeader={true}>
     <main>
       <h1>{title}</h1>
-      {posts
-        .filter(post => post.node.frontmatter.draft !== true)
-        .map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug;
-          return (
-            <article key={node.fields.slug}>
-              <h2>
-                <Link to={node.fields.slug}>{title}</Link>
-              </h2>
-              <DateTime dateString={node.frontmatter.date} />
-              <p>{node.frontmatter.description}</p>
-            </article>
-          );
-        })}
+      <ul style={{ listStyle: "none", padding: 0 }}>
+        {posts
+          .filter(post => post.node.frontmatter.draft !== true)
+          .map(({ node }) => {
+            const title = node.frontmatter.title || node.fields.slug;
+            return (
+              <li>
+                <article key={node.fields.slug}>
+                  <h2>
+                    <Link to={node.fields.slug}>{title}</Link>
+                  </h2>
+                  <DateTime dateString={node.frontmatter.date} />
+                  <p>{node.frontmatter.description}</p>
+                </article>
+              </li>
+            );
+          })}
+      </ul>
     </main>
   </Layout>
 );
