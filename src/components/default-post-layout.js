@@ -2,10 +2,12 @@ import React from "react";
 import { graphql } from "gatsby";
 import MDXRenderer from "gatsby-mdx/mdx-renderer";
 import Layout from "./Layout";
+import Seo from "./seo";
 import Bio from "./Bio";
 import styles from "./post.module.scss";
 
-export default function PostTemplate({ data: { mdx } }) {
+export default function PostTemplate({ data }) {
+  const mdx = data.allMdx.edges[0].node;
   let mainClass = mdx.fields.slug
     .split("/")
     .filter(Boolean)
@@ -19,6 +21,10 @@ export default function PostTemplate({ data: { mdx } }) {
 
     return (
       <main className={className}>
+        <Seo
+          title={mdx.frontmatter.title}
+          description={mdx.frontmatter.description}
+        />
         <MDXRenderer>{mdx.code.body}</MDXRenderer>
       </main>
     );
@@ -37,19 +43,26 @@ export default function PostTemplate({ data: { mdx } }) {
 }
 
 export const pageQuery = graphql`
-  query BlogPostQuery($id: String) {
-    mdx(id: { eq: $id }) {
-      id
-      frontmatter {
-        title
-        skipLayout
-        withMarkdown
-      }
-      fields {
-        slug
-      }
-      code {
-        body
+  query PostQuery($id: String) {
+    allMdx(filter: { id: { eq: $id } }) {
+      edges {
+        node {
+          frontmatter {
+            description
+            title
+            skipLayout
+            draft
+            withMarkdown
+          }
+          fields {
+            listing
+            slug
+          }
+          id
+          code {
+            body
+          }
+        }
       }
     }
   }
