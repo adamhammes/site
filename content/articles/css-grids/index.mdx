@@ -12,21 +12,147 @@ import CssGridContainer from "../../../src/components/css-grid-container/css-gri
 import "./css-grids.scss";
 
 <Header bioInHeader={false} />
+## Tables
 
-# CSS Grids Through the Ages
-
-First up is the venerable `table`:
+```html
+<table class="css-grids--table">
+  <tbody>
+    <tr>
+      <td>
+        <img src="/felix-inden-faroe-islands.jpg" />
+      </td>
+      <td>
+        <img src="/lostcanuck-greenland.jpg" />
+      </td>
+      <td>
+        <img src="/albert-dros-tulips.jpg" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img src="/albert-dros-volcano.jpg" />
+      </td>
+      <td>
+        <img src="/joshua-sortino-iceland.jpg" />
+      </td>
+      <td>
+        <img src="/matt-macpherson-smokies.jpg" />
+      </td>
+    </tr>
+  </tbody>
+</table>
+```
 
 <CssGridContainer path="/articles/css-grids/table" />
 
-`float`
+## Floats
+
+```html
+<div class="css-grids--float">
+  <div class="css-grids--float-row">
+    <div class="css-grids--float-item">
+      <img src="/felix-inden-faroe-islands.jpg" />
+    </div>
+    <div class="css-grids--float-item">
+      <img src="/lostcanuck-greenland.jpg" />
+    </div>
+    <div class="css-grids--float-item">
+      <img src="/albert-dros-tulips.jpg" />
+    </div>
+  </div>
+  <div class="css-grids--float-row">
+    <div class="css-grids--float-item">
+      <img src="/albert-dros-volcano.jpg" />
+    </div>
+    <div class="css-grids--float-item">
+      <img src="/joshua-sortino-iceland.jpg" />
+    </div>
+    <div class="css-grids--float-item">
+      <img src="/matt-macpherson-smokies.jpg" />
+    </div>
+  </div>
+</div>
+```
 
 <CssGridContainer path="/articles/css-grids/float" />
 
-`flex`
+## Flexbox
+
+```html
+<div class="css-grids--flex-outer">
+  <ul class="css-grids--flex">
+    <li>
+      <img src="/felix-inden-faroe-islands.jpg" />
+    </li>
+    <li>
+      <img src="/lostcanuck-greenland.jpg" />
+    </li>
+    <li>
+      <img src="/albert-dros-tulips.jpg" />
+    </li>
+    <li>
+      <img src="/albert-dros-volcano.jpg" />
+    </li>
+    <li>
+      <img src="/joshua-sortino-iceland.jpg" />
+    </li>
+    <li>
+      <img src="/matt-macpherson-smokies.jpg" />
+    </li>
+  </ul>
+</div>
+```
+
+```scss
+.css-grids--flex-outer {
+  padding: 0 calc(0.5 * var(--grid-spacing));
+}
+
+.css-grids--flex {
+  @include list-reset();
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(-0.5 * var(--grid-spacing));
+}
+
+.css-grids--flex li {
+  padding: calc(0.5 * var(--grid-spacing));
+
+  @media screen and (min-width: 550px) {
+    width: calc(100% / 2);
+  }
+
+  @media screen and (min-width: 800px) {
+    width: calc(100% / 3);
+  }
+}
+```
 
 <CssGridContainer path="/articles/css-grids/flex" />
 
-`grid`
+## Grid
+
+```html
+<ul class="css-grids--grid">
+  <li>
+    <img src="/felix-inden-faroe-islands.jpg" />
+  </li>
+  <li>
+    <img src="/lostcanuck-greenland.jpg" />
+  </li>
+  <li>
+    <img src="/albert-dros-tulips.jpg" />
+  </li>
+  <li>
+    <img src="/albert-dros-volcano.jpg" />
+  </li>
+  <li>
+    <img src="/joshua-sortino-iceland.jpg" />
+  </li>
+  <li>
+    <img src="/matt-macpherson-smokies.jpg" />
+  </li>
+</ul>
+```
 
 <CssGridContainer path="/articles/css-grids/grid" />
