@@ -73,12 +73,14 @@ main.articles-css-grids-table {
 
 main.articles-css-grids-float {
   --grid-spacing: 0.5rem;
+  padding: 0 var(--grid-spacing);
+
   .css-grids--float-outer {
     padding: var(--grid-spacing);
   }
 
   .css-grids--float {
-    margin: 0 -var(--grid-spacing);
+    margin: 0 calc(-1 * var(--grid-spacing));
   }
 
   .css-grids--float-row::after {
@@ -89,7 +91,7 @@ main.articles-css-grids-float {
 
   .css-grids--float-item {
     padding: var(--grid-spacing);
-    width: 33%;
+    width: 33.3333%;
     float: left;
   }
 }
@@ -105,7 +107,7 @@ main.articles-css-grids-flex {
     @include list-reset();
     display: flex;
     flex-wrap: wrap;
-    margin: -var(--grid-spacing);
+    margin: calc(-1 * var(--grid-spacing));
   }
 
   .css-grids--flex li {
@@ -122,10 +124,13 @@ main.articles-css-grids-flex {
 }
 
 main.articles-css-grids-grid {
+  --grid-spacing: 0.5rem;
+  padding: 0 var(--grid-spacing);
+
   .css-grids--grid {
     @include list-reset();
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 1rem;
+    grid-gap: calc(2 * var(--grid-spacing));
   }
 }
