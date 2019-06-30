@@ -1,0 +1,70 @@
+.gridList,
+.spaceBetween,
+.calcTrickery,
+.negativeMargins,
+.actualGrid {
+  list-style-type: none;
+  padding: 0;
+  margin: calc(2 * var(--rhythm)) 0;
+
+  div {
+    height: 5rem;
+    background: var(--primary-color);
+    width: 100%;
+  }
+}
+
+.gridList {
+  margin: 0 -0.5rem;
+  list-style-type: none;
+
+  display: flex;
+
+  > li {
+    width: 33%;
+    padding: 0.5rem;
+  }
+}
+
+.spaceBetween {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  > li {
+    width: 31%;
+  }
+}
+
+.calcTrickery {
+  --gutter-size: 1rem;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calcTrickery > li {
+  width: calc(33.3333% - calc(var(--gutter-size) / 3 * 2));
+  margin-right: var(--gutter-size);
+}
+
+.calcTrickery > li:nth-child(3n) {
+  margin-right: 0;
+}
+
+.negativeMargins {
+  --gutter-size: 1rem;
+  display: flex;
+  margin: calc(2 * var(--rhythm)) calc(-0.5 * var(--gutter-size));
+}
+
+.negativeMargins > li {
+  width: 33.333333%;
+  padding: calc(0.5 * var(--gutter-size));
+}
+
+.actualGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1rem;
+}
