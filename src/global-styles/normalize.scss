@@ -50,6 +50,10 @@ body {
   max-width: 40rem;
   width: 100%;
   padding: var(--rhythm);
+
+  @media print {
+    max-width: 8.5in;
+  }
 }
 
 /**
@@ -414,6 +418,12 @@ ul,
 ol {
   padding: 0 0 0 var(--rhythm);
   margin: 0 0 var(--rhythm);
+}
+
+.list-reset {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 li:not(:last-of-type) {
