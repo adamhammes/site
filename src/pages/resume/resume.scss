@@ -1,7 +1,10 @@
 .resume {
   max-width: 8.5in;
   margin: 0 auto;
-  padding-bottom: var(--rhythm);
+
+  @media screen {
+    padding: var(--rhythm);
+  }
 
   section {
     display: flex;
@@ -10,8 +13,13 @@
 
   .tagline {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 15px;
+  }
+
+  section + section,
+  .tagline {
+    margin-top: var(--rhythm);
   }
 
   h1,
@@ -26,5 +34,13 @@
 
   h3 {
     margin-top: 0;
+  }
+
+  .tagline + * {
+    margin-top: 3px;
+  }
+
+  h3 + ul {
+    margin-top: 5px;
   }
 }

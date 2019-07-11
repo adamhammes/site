@@ -67,8 +67,10 @@ const relatedProjects = [
 
 const Resume = () => (
   <main className="resume">
-    <h1>Adam Hammes</h1>
-    <section>641-670-1400 • adam@hammes.io </section>
+    <section>
+      <h1>Adam Hammes</h1>
+      641-670-1400 • adam@hammes.io
+    </section>
     <section>
       <h2>Education</h2>
       <span className="tagline">
