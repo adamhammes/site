@@ -17,7 +17,12 @@ const jobs = [
     location: "Ames IA",
     when: "Summer 2016",
     title: "Software Development Intern",
-    points: [],
+    points: [
+      "Collaborated on a Dart/React front-end application used by a majority of Fortune 500 companies",
+      "Proposed and oversaw team-wide documentation initiative",
+      "Utilized continuous integration and delivery best-practices to deliver a cutting-edge product",
+      "Coordinated testing blitzes for critical user-facing features",
+    ],
   },
   {
     id: "compressor",
@@ -25,7 +30,11 @@ const jobs = [
     location: "Des Moines IA",
     when: "Summer 2015",
     title: "Software Development Intern",
-    points: [],
+    points: [
+      "Solo-developed a C#/WPF application deployed to engineering companies worldwide",
+      "Gathered requirements from field engineers and end-users",
+      "Participated in an Agile/Scrum based team process",
+    ],
   },
 ];
 
@@ -40,13 +49,19 @@ const relatedProjects = [
     id: "pyfic",
     byline: "Pyfic, personal project",
     when: "Fall 2016",
-    points: [],
+    points: [
+      "Created a Python app to create electronic books from online sources",
+      "Employed asynchronous I/O to conduct parallel page requests",
+    ],
   },
   {
     id: "crn",
     byline: "CRN, Iowa State University",
     when: "Fall 2014",
-    points: [],
+    points: [
+      "Participated in a team of undergraduates on a semester-long research project",
+      "Implemented a 1979 paper describing how to mathematically model sets of chemical reactions",
+    ],
   },
 ];
 
@@ -75,6 +90,11 @@ const Resume = () => (
               <span>{job.when}</span>
             </span>
             <h3>{job.title}</h3>
+            <ul>
+              {job.points.map(point => (
+                <li>{point}</li>
+              ))}
+            </ul>
           </li>
         ))}
       </ul>
@@ -88,6 +108,11 @@ const Resume = () => (
               <em>{project.byline}</em>
               <span>{project.when}</span>
             </span>
+            <ul>
+              {project.points.map(point => (
+                <li>{point}</li>
+              ))}
+            </ul>
           </li>
         ))}
       </ul>
