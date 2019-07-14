@@ -51,7 +51,6 @@ const allProjects = [
     points: [
       "Visualized the apartment offerings for major cities in Quebec",
       "Scraped apartment offerings with Python/Scrapy",
-      "Delivered an extremely fast user experience with React, Gatsby and Netlify",
     ],
   },
   {
