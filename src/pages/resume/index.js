@@ -23,6 +23,12 @@ const Resume = () => (
       <span></span>
     </section>
     <section>
+      <h2>Skills</h2>
+      <span style={{ marginTop: "var(--rhythm)" }}>
+        Javascript, Python, Dart, C#, Typescript, React, Gatsby, LaTeX
+      </span>
+    </section>
+    <section>
       <h2>Work Experience</h2>
       <ul className="list-reset">
         {jobs("cortex", "workiva", "compressor").map(job => (
