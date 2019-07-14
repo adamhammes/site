@@ -10,7 +10,9 @@ const allJobs = [
     points: [
       <>
         Technical lead for the front-end redesign of{" "}
-        <a href="https://www.alfaromeo.ca/en">Alfa Romeo's Canadian brand</a>
+        <a target="_blank" href="https://www.alfaromeo.ca/en">
+          Alfa Romeo's Canadian brand
+        </a>
       </>,
       "Created a Gatsby/React demo app for the Montreal department of tourism",
       "Wrote an embedded Python client for use in electric car chargers",
