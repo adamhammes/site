@@ -16,7 +16,11 @@ const Resume = () => (
         <span>Graduated Fall 2017</span>
       </span>
       <strong>Bachelor of Computer Science</strong>
-      <span>3.58 GPA</span>
+      <ul class="list-reset">
+        <li>3.58 GPA</li>
+        <li>Member of Phi Beta Kappa</li>
+      </ul>
+      <span></span>
     </section>
     <section>
       <h2>Work Experience</h2>
