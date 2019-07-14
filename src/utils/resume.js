@@ -46,7 +46,18 @@ const allJobs = [
 const allProjects = [
   {
     id: "carte",
-    byline: "À la carte, personal project",
+    byline: (
+      <>
+        <a target="_blank" href="https://alacarte.hammes.io">
+          À la carte
+        </a>{" "}
+        (
+        <a target="_blank" href="https://github.com/adamhammes/kijiji-housing">
+          github.com/adamhammes/kijiji-housing
+        </a>
+        )
+      </>
+    ),
     when: "Winter 2017",
     points: [
       "Visualized the apartment offerings for major cities in Quebec",
