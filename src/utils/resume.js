@@ -8,14 +8,14 @@ const allJobs = [
     when: "Spring 2017 - Current",
     title: "Fullstack Developer",
     points: [
+      "Created a Gatsby/React demo app for Tourisme Montréal",
+      "Wrote an embedded Python client for use in electric car chargers",
       <>
         Technical lead for the front-end redesign of{" "}
         <a target="_blank" href="https://www.alfaromeo.ca/en">
           Alfa Romeo's Canadian brand
         </a>
       </>,
-      "Created a Gatsby/React demo app for the Montreal department of tourism",
-      "Wrote an embedded Python client for use in electric car chargers",
     ],
   },
   {
