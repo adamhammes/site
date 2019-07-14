@@ -7,6 +7,13 @@
     padding: var(--rhythm);
   }
 
+  a {
+    @media print {
+      color: inherit;
+      box-shadow: none;
+    }
+  }
+
   section {
     display: flex;
     flex-direction: column;
