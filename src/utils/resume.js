@@ -1,3 +1,5 @@
+import React from "react";
+
 const allJobs = [
   {
     id: "cortex",
@@ -5,7 +7,14 @@ const allJobs = [
     location: "Quebec City QC",
     when: "Spring 2017 - Current",
     title: "Fullstack Developer",
-    points: [],
+    points: [
+      <>
+        Technical lead for the front-end redesign of{" "}
+        <a href="https://www.alfaromeo.ca/en">Alfa Romeo's Canadian brand</a>
+      </>,
+      "Created a Gatsby/React demo app for the Montreal department of tourism",
+      "Wrote an embedded Python client for use in electric car chargers",
+    ],
   },
   {
     id: "workiva",
