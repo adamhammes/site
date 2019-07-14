@@ -52,7 +52,7 @@ const Resume = () => (
     <section>
       <h2>Related Project Experience</h2>
       <ul className="list-reset">
-        {projects("carte", "pyfic").map(project => (
+        {projects("carte").map(project => (
           <li key={project.id}>
             <span className="tagline">
               <em>{project.byline}</em>
