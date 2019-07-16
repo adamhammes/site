@@ -1,18 +1,18 @@
 import React from "react";
 
 import "./resume.scss";
-import { jobs, projects } from "../../utils/resume";
+import { personalInformation, jobs, projects } from "../../utils/resume";
 
 const Resume = () => (
   <main className="resume">
     <section>
-      <h1>Adam Hammes</h1>
-      641-670-1400 • adam@hammes.io
+      <h1>{personalInformation.name}</h1>
+      {personalInformation.phoneNumber} • {personalInformation.email}
     </section>
     <section>
       <h2>Education</h2>
       <span className="tagline">
-        <em>Iowa State University, Ames, Iowa</em>
+        <em>{personalInformation.university}</em>
         <span>Graduated Fall 2017</span>
       </span>
       <strong>Bachelor of Computer Science</strong>

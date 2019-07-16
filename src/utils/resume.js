@@ -1,5 +1,32 @@
 import React from "react";
 
+const isAnonymous = true;
+const personalInformation = isAnonymous
+  ? {
+      name: "John Doe",
+      phoneNumber: "123-456-7890",
+      email: "john@doe.io",
+      university: "State University, City ST",
+    }
+  : {
+      name: "Adam Hammes",
+      phoneNumber: "641-670-1400",
+      email: "adam@hammes.io",
+      university: "Iowa State University, Ames IA",
+    };
+
+const cortexOverrides = isAnonymous
+  ? { company: "Small Québécois Agency", location: "Québec QC" }
+  : {};
+
+const workivaOverrides = isAnonymous
+  ? { company: "Medium-Sized Company", location: "Midwest city, ST" }
+  : {};
+
+const compressorOverrides = isAnonymous
+  ? { company: "Small Company", location: "Midwest City ST" }
+  : {};
+
 const allJobs = [
   {
     id: "cortex",
@@ -17,6 +44,7 @@ const allJobs = [
         </a>
       </>,
     ],
+    ...cortexOverrides,
   },
   {
     id: "workiva",
@@ -30,6 +58,7 @@ const allJobs = [
       "Utilized continuous integration and delivery best-practices to deliver a cutting-edge product",
       "Coordinated testing blitzes for critical user-facing features",
     ],
+    ...workivaOverrides,
   },
   {
     id: "compressor",
@@ -42,6 +71,7 @@ const allJobs = [
       "Gathered requirements from field engineers and end-users",
       "Participated in an Agile/Scrum based team process",
     ],
+    ...compressorOverrides,
   },
 ];
 
@@ -90,4 +120,4 @@ const jobs = (...ids) => ids.map(id => allJobs.find(job => job.id == id));
 const projects = (...ids) =>
   ids.map(id => allProjects.find(project => project.id == id));
 
-export { jobs, projects };
+export { jobs, projects, personalInformation };
