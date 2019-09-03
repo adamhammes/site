@@ -3,6 +3,15 @@
 
 # Hammes Family Cousin Letters
 
+August 2019
+
+- [Adam](/cousin-letters/2019-08%20Adam.pdf)
+
+July 2019
+
+- [Ben](/cousin-letters/2019-07%20Ben.pdf)
+- [Allison](/cousin-letters/2019-07%20Allison.pdf)
+
 June 2019
 
 - [Lisa](/cousin-letters/2019-06%20Lisa.pdf)
