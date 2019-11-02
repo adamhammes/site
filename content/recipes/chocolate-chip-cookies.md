@@ -7,12 +7,12 @@ description: "The most foolproof recipe I've tried yet."
 
 ## Ingredients
 
-- 2 1/4 cups all-purpose flour
+- 2 1/4 cups all-purpose flour (270 grams)
 - 1 1/4 teaspoons kosher salt (or 3/4 teaspoon of fine table salt)
 - 1 teaspoon baking soda
-- 2 sticks (1 cup) very soft unsalted butter (be sure the butter is room temp, and very, very soft!)
-- 1 cup sugar
-- 1/2 cup light brown sugar
+- 2 sticks (1 cup/227 grams) very soft unsalted butter (be sure the butter is room temp, and very, very soft!)
+- 1 cup sugar (198 grams)
+- 1/2 cup light brown sugar (99 grams)
 - 1 1/4 teaspoons vanilla extract
 - 2 tablespoons milk
 - 1 large egg
