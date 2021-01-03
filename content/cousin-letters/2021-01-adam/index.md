@@ -1,5 +1,6 @@
 +++
 title = "Adam - January 2021"
+description = "Adam's Cousin Letter - January 2021"
 +++
 
 # Adam's Cousin Letter, January 2021
