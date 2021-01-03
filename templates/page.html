@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+<!-- prettier-ignore -->
+{% block title %}
+    {% if section %}
+        {% set page = section %}
+    {% endif %}
+    {{ page.title }}
+{% endblock title %}
+{% block description %}
+    {% if section %}
+        {% set page = section %}
+    {% endif %}
+    {{ page.description }}
+{% endblock description %}
+{% block content %}
+    {% if section %}
+        {% set page = section %}
+    {% endif %}
+<main>{{ page.content | safe }}</main>
+{% endblock content %}

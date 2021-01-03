@@ -1,9 +1,9 @@
----
-title: "Coconut Macaroons"
-draft: false
-date: "2017-02-07T13:27:54-06:00"
-description: "Crispy on the outside, chewy in the interior with a nice taste of coconut."
----
++++
+title = "Coconut Macaroons"
+draft = false
+date = 2017-02-07T13:27:54-06:00
+description = "Crispy on the outside, chewy in the interior with a nice taste of coconut."
++++
 
 ## Ingredients
 

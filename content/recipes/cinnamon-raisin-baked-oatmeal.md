@@ -1,9 +1,9 @@
----
-title: "Cinnamon Raisin Baked Oatmeal"
-date: 2019-01-07
-draft: false
-description: "A convenient and less sugary alternative to granola bars"
----
++++
+title = "Cinnamon Raisin Baked Oatmeal"
+date = 2019-01-07
+draft = false
+description = "A convenient and less sugary alternative to granola bars"
++++
 
 ## Ingredients
 

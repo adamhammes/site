@@ -1,9 +1,9 @@
----
-title: "Chocolate Chip Cookies"
-date: 2019-10-20T13:45:39-04:00
-draft: false
-description: "The most foolproof recipe I've tried yet."
----
++++
+title = "Chocolate Chip Cookies"
+date = 2019-10-20T13:45:39-04:00
+draft = false
+description = "The most foolproof recipe I've tried yet."
++++
 
 ## Ingredients
 

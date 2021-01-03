@@ -1,9 +1,9 @@
----
-title: "Chunky Tomato Soup"
-date: 2019-03-14T20:11:39-04:00
-draft: false
-description: "Diced tomatoes and smoked paprika form the crux of this broth-based soup."
----
++++
+title = "Chunky Tomato Soup"
+date = 2019-03-14T20:11:39-04:00
+draft = false
+description = "Diced tomatoes and smoked paprika form the crux of this broth-based soup."
++++
 
 ## Ingredients
 

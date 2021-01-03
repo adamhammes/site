@@ -1,9 +1,9 @@
----
-title: "Greek Lemon Chicken and Potatoes"
-date: 2018-09-11T18:11:53-04:00
-draft: false
-description: "My goto dish for impressing my potato- and meat-loving friends."
----
++++
+title = "Greek Lemon Chicken and Potatoes"
+date = 2018-09-11T18:11:53-04:00
+draft = false
+description = "My goto dish for impressing my potato- and meat-loving friends."
++++
 
 ## Ingredients
 

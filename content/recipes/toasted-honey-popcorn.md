@@ -1,8 +1,8 @@
----
-title: "Toasted Honey Popcorn"
-date: 2017-12-04T09:42:16-05:00
-description: "Sweet popcorn isn't really my jam, but when the occasion calls I reach for this recipe. Toasted butter, honey, and salt combine to form a sweet and salty popcorn coating."
----
++++
+title = "Toasted Honey Popcorn"
+date = 2017-12-04T09:42:16-05:00
+description = "Sweet popcorn isn't really my jam, but when the occasion calls I reach for this recipe. Toasted butter, honey, and salt combine to form a sweet and salty popcorn coating."
++++
 
 ## Ingredients
 

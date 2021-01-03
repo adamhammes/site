@@ -1,10 +1,10 @@
----
-title: "Oatmeal Cookies"
-date: 2020-04-19T14:19:59-04:00
-draft: false
-description: "An appealing alternative to standard chocolate chip cookies"
-original_link: "https://www.quakeroats.com/cooking-and-recipes/vanishing-oatmeal-raisin-cookies"
----
++++
+title = "Oatmeal Cookies"
+date = 2020-04-19T14:19:59-04:00
+draft = false
+description = "An appealing alternative to standard chocolate chip cookies"
+original_link = "https://www.quakeroats.com/cooking-and-recipes/vanishing-oatmeal-raisin-cookies"
++++
 
 ## Ingredients
 

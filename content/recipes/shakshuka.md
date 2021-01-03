@@ -1,9 +1,9 @@
----
-title: "Shakshuka"
-date: 2019-11-01T22:13:39-04:00
-draft: false
-description: "A hardy, savory tomato-based dish equally adapted for supper as breakfast."
----
++++
+title = "Shakshuka"
+date = 2019-11-01T22:13:39-04:00
+draft = false
+description = "A hardy, savory tomato-based dish equally adapted for supper as breakfast."
++++
 
 ## Ingredients
 
@@ -48,4 +48,4 @@ For serving (optional):
    Take the shakshuka off the heat slightly before the eggs are done, as the residual heat will continue to cook them.
    Sprinkle on the feta cheese and parsley.
 
-6. To serve: layer sauce, egg, then sauce again in a bowl alongside a slice of toast.
+6. To serve = layer sauce, egg, then sauce again in a bowl alongside a slice of toast.

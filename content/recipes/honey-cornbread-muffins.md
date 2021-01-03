@@ -1,9 +1,9 @@
----
-title: "Honey Cornbread Muffins"
-draft: false
-date: "2016-11-30T21:40:51-06:00"
-description: "Much sweeter than the store-bought mix, with a cake-like texture."
----
++++
+title = "Honey Cornbread Muffins"
+draft = false
+date = 2016-11-30T21:40:51-06:00
+description = "Much sweeter than the store-bought mix, with a cake-like texture."
++++
 
 <!--more-->
 

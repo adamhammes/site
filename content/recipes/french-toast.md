@@ -1,9 +1,9 @@
----
-date: "2018-01-07T20:13:38-05:00"
-title: "French Toast"
-draft: false
-description: "Fluffy make-ahead French toast."
----
++++
+date = 2018-01-07T20:13:38-05:00
+title = "French Toast"
+draft = false
+description = "Fluffy make-ahead French toast."
++++
 
 ## Ingredients
 

@@ -1,9 +1,9 @@
----
-title: "Asian Cabbage Stir Fry"
-date: 2018-09-03T14:15:18-04:00
-draft: false
-description: "A sweet & spicy stir fry starring our old friend, the cabbage."
----
++++
+title = "Asian Cabbage Stir Fry"
+date = 2018-09-03T14:15:18-04:00
+draft = false
+description = "A sweet & spicy stir fry starring our old friend, the cabbage."
++++
 
 ## Ingredients
 

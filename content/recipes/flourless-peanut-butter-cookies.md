@@ -1,9 +1,9 @@
----
-title: "Flourless Peanut Butter/Chocolate Chip Cookies"
-date: 2018-09-30T22:16:25-04:00
-draft: false
-description: "Ridiculously easy recipe for when I'm running late to a party."
----
++++
+title = "Flourless Peanut Butter/Chocolate Chip Cookies"
+date = 2018-09-30T22:16:25-04:00
+draft = false
+description = "Ridiculously easy recipe for when I'm running late to a party."
++++
 
 ## Ingredients
 

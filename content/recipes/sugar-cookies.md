@@ -1,9 +1,9 @@
----
-date: "2016-12-24T13:28:16-05:00"
-title: "Sugar Cookies"
-draft: false
-description: "The classic rolled sugar cookie recipe."
----
++++
+date = 2016-12-24T13:28:16-05:00
+title = "Sugar Cookies"
+draft = false
+description = "The classic rolled sugar cookie recipe."
++++
 
 ## Ingredients
 

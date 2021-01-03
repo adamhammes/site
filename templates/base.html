@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/base.css" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{% block title %} {% endblock %}</title>
+    <meta name="description" content="{% block description %} {% endblock %}" />
+  </head>
+  <body>
+    <header class="header__container">
+      <a href="/" class="header__site-link">hammes.io/</a>
+    </header>
+    {% block content %} {% endblock %}
+  </body>
+</html>

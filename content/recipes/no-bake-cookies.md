@@ -1,9 +1,9 @@
----
-title: "No-Bake Cookies"
-draft: false
-date: "2016-11-30T21:40:39-06:00"
-description: "A peanut butter/chocolate/oats smorgasbord cooked on the stovetop."
----
++++
+title = "No-Bake Cookies"
+draft = false
+date = 2016-11-30T21:40:39-06:00
+description = "A peanut butter/chocolate/oats smorgasbord cooked on the stovetop."
++++
 
 ## Ingredients
 

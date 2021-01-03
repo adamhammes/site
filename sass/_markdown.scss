@@ -1,0 +1,26 @@
+.markdown__container {
+  img {
+    display: block;
+    margin: calc(var(--rhythm) * 2) auto;
+    max-width: 100%;
+  }
+
+  pre {
+    overflow: auto;
+    padding: 1rem;
+    border-radius: calc(var(--rhythm) / 5);
+    margin: calc(var(--rhythm) * 2) 0;
+  }
+
+  blockquote {
+    margin: 0 0 0 var(--rhythm);
+    padding: calc(0.5 * var(--rhythm)) var(--rhythm);
+    background: var(--background-highlight-color);
+
+    border-left: 3px solid var(--primary-color);
+
+    p {
+      margin: 0;
+    }
+  }
+}

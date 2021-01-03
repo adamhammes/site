@@ -1,10 +1,10 @@
----
-title: "Mushroom Carbonara"
-date: 2020-04-19T14:27:59-04:00
-draft: false
-description: "A vegetarian version of the classic savory Italian dish"
-original_link: "https://www.bonappetit.com/recipe/mushroom-carbonara"
----
++++
+title = "Mushroom Carbonara"
+date = 2020-04-19T14:27:59-04:00
+draft = false
+description = "A vegetarian version of the classic savory Italian dish"
+original_link = "https://www.bonappetit.com/recipe/mushroom-carbonara"
++++
 
 ## Ingredients
 

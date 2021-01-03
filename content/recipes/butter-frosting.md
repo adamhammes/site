@@ -1,9 +1,9 @@
----
-draft: false
-date: "2016-12-24T13:28:25-05:00"
-title: "Butter Frosting"
-description: "Simple, yet delicious vanilla frosting."
----
++++
+draft = false
+date = 2016-12-24T13:28:25-05:00
+title = "Butter Frosting"
+description = "Simple, yet delicious vanilla frosting."
++++
 
 ## Ingredients
 
@@ -24,4 +24,4 @@ description: "Simple, yet delicious vanilla frosting."
 
 ## Notes
 
-Be careful adding sugar so that the ratio of sugar : milk : butter doesn't get too out of whack.
+Be careful adding sugar so that the ratio of sugar = milk = butter doesn't get too out of whack.

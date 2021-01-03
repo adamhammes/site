@@ -1,9 +1,9 @@
----
-title: "Chocolate Peppermint Snaps"
-draft: false
-date: "2016-11-30T21:40:27-06:00"
-description: "Basically Girl Scout thin mints without the fudge shell."
----
++++
+title = "Chocolate Peppermint Snaps"
+draft = false
+date = 2016-11-30T21:40:27-06:00
+description = "Basically Girl Scout thin mints without the fudge shell."
++++
 
 ## Ingredients
 
@@ -48,4 +48,4 @@ description: "Basically Girl Scout thin mints without the fudge shell."
 11. Wrap airtight, and store at room temperature.
     These cookies are sensitive to humidity; if they're crunchy, they'll quickly soften during humid weather, if not wrapped securely.
 
-Yield: About 70 small cookies.
+Yield = About 70 small cookies.

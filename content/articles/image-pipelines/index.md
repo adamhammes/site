@@ -1,12 +1,13 @@
----
-title: "Creating an Image Pipeline"
-date: 2019-06-01T20:40:53-04:00
-draft: false
-description: >
-  Working with images is a common occurrence in the life of a frontend
-  developer. This article discusses optimization techniques and hosting
-  methods, with a healthy dose of shell-fu mixed in.
----
++++
+title = "Creating an Image Pipeline"
+date = 2019-06-01T20:40:53-04:00
+draft = false
+description = """
+  Working with images is a common occurrence in the life of a frontend \
+  developer. This article discusses optimization techniques and hosting \
+  methods, with a healthy dose of shell-fu mixed in. \
+"""
++++
 
 ## Table of Contents
 
@@ -115,7 +116,7 @@ For each of our 2000 original images (in PNG format), we're going to do two thin
 1. Convert the original image from to a lossy WEBP
 
 My work computer is a Mac, so I'll be using tools available on that platform.
-For the PNG compression, this will be [ImageOptim-Cli](https://github.com/JamieMason/ImageOptim-CLI#cloud-installation) and [ImageAlpha](https://pngmini.com/).
+For the PNG compression, this will be [ImageOptim-Cli](https://github.com/JamieMason/ImageOptim-CLI#user-content--installation) and [ImageAlpha](https://pngmini.com/).
 The WEBP compression will be handled by [ImageMagick](https://imagemagick.org/index.php).
 
 Here's an example for both the PNG and WEBP formats:

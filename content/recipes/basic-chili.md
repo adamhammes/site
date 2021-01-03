@@ -1,9 +1,9 @@
----
-title: "Basic Chili"
-date: 2018-09-11T17:31:39-04:00
-draft: false
-description: "Good, hearty chili base for a brisk autumn."
----
++++
+title = "Basic Chili"
+date = 2018-09-11T17:31:39-04:00
+draft = false
+description = "Good, hearty chili base for a brisk autumn."
++++
 
 ## Ingredients
 

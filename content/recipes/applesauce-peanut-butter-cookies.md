@@ -1,9 +1,9 @@
----
-title: "Applesauce Peanut Butter Cookies"
-date: 2018-10-06T23:38:59-04:00
-draft: false
-description: "Using applesauce as a coagulant instead of eggs makes this cookie an appealing vegan option."
----
++++
+title = "Applesauce Peanut Butter Cookies"
+date = 2018-10-06T23:38:59-04:00
+draft = false
+description = "Using applesauce as a coagulant instead of eggs makes this cookie an appealing vegan option."
++++
 
 ## Ingredients
 

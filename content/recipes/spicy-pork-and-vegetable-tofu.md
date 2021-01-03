@@ -1,9 +1,9 @@
----
-title: "Spicy Pork and Vegetable Tofu"
-date: 2018-10-06T12:01:31-04:00
-draft: false
-description: "Sweet and spicy stir fry featuring zucchini, pork, and tofu."
----
++++
+title = "Spicy Pork and Vegetable Tofu"
+date = 2018-10-06T12:01:31-04:00
+draft = false
+description = "Sweet and spicy stir fry featuring zucchini, pork, and tofu."
++++
 
 ## Ingredients
 
