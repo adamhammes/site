@@ -1,5 +1,15 @@
 .markdown__container {
-  img {
+  figure {
+    margin: 0;
+  }
+
+  figcaption {
+    margin: calc(var(--rhythm) * -1) 0 calc(var(--rhythm) * 2);
+    text-align: center;
+  }
+
+  img,
+  video {
     display: block;
     margin: calc(var(--rhythm) * 2) auto;
     max-width: 100%;

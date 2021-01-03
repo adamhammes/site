@@ -16,5 +16,5 @@
     {% if section %}
         {% set page = section %}
     {% endif %}
-<main>{{ page.content | safe }}</main>
+<main class="markdown__container">{{ page.content | safe }}</main>
 {% endblock content %}
