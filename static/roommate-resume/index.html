@@ -1,0 +1,161 @@
+<link rel="stylesheet" href="/base.css" />
+    <meta name="viewport" content="width=device-width" />
+
+<style>
+  body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin: 0 auto;
+    padding: var(--rhythm);
+    box-sizing: border-box;
+  }
+
+  @media print {
+    body {
+      padding: 0;
+    }
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  .resume {
+    max-width: 8.5in;
+    margin: 0 auto;
+    font-family: "Times New Roman", Times, serif;
+  }
+  a {
+    @media print {
+      color: inherit;
+      box-shadow: none;
+    }
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  ul {
+    margin: 0;
+  }
+
+  .tagline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: calc(2 * var(--rhythm));
+  }
+
+  section + section,
+  .tagline {
+    margin-top: var(--rhythm);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+
+  .tagline + * {
+    margin-top: 3px;
+  }
+
+  h3 + ul {
+    margin-top: 5px;
+    line-height: 1.2;
+  }
+
+  li {
+    margin: 0;
+  }
+</style>
+<main class="resume">
+  <section>
+    <h1>Adam Hammes</h1>
+    641-670-1400 &bull; adam@hammes.io
+  </section>
+  <section>
+    <h2>Education</h2>
+    <span class="tagline">
+      <em>Iowa State University</em>
+      <span>Graduated Fall 2017</span>
+    </span>
+    <strong>Bachelor of Computer Science</strong>
+    <span>3.58 GPA (Cum Laude, Phi Beta Kappa)</span>
+    <span></span>
+  </section>
+  <section>
+    <h2>Skills</h2>
+    <span style="margin-top: var(--rhythm)">
+      Paying rent on time, cooking popcorn, cleaning toilets, playing beginner songs on piano
+    </span>
+  </section>
+  <section>
+    <h2>Previous Living Experience</h2>
+    <ul class="list-reset">
+      <li>
+        <span class="tagline">
+          <em>Eldest Child</em>
+          <span>1995 - 2013</span>
+        </span>
+        <h3>Freeloader, 115 Rosenberger Ave</h3>
+        <ul>
+          <li>Frequently performed chores around the household</li>
+          <li>Took care of little brother</li>
+        </ul>
+      </li>
+      <li>
+        <span class="tagline">
+          <em>Prodigy Student</em>
+          <span>2013-2016</span>
+        </span>
+        <h3>Solo Rental, Iowa State University</h3>
+        <ul>
+          <li>Vice-president of the dormitory (~600 residents)</li>
+          <li>Planned many fun activities for other students</li>
+        </ul>
+      </li>
+      <li>
+        <span class="tagline">
+          <em>Alpha Roommate</em>
+          <span>2016 - 2017</span>
+        </span>
+        <h3>Colocation, Ames, IA</h3>
+        <ul>
+          <li>Lived in a house with five other guys</li>
+          <li>Coordinated payment of rental checks</li>
+          <li>Planned occasional dance nights</li>
+        </ul>
+      </li>
+      <li>
+        <span class="tagline">
+          <em>Bewildered Foreigner</em>
+          <span>2017 - 2018</span>
+        </span>
+        <h3>Solo Rental, Quebec City</h3>
+        <ul>
+          <li>Did nothing but study</li>
+          <li>Zero noise complaints from neighbors</li>
+        </ul>
+      </li>
+      <li>
+        <span class="tagline">
+          <em>Eligible Bachelor</em>
+          <span>2018 - Present</span>
+        </span>
+        <h3>Solo Rental, Quebec City</h3>
+        <ul>
+          <li>Hosted very-sought after parties and board game nights</li>
+          <li>Cooked weekly for a wide variety of audiences</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+</main>
