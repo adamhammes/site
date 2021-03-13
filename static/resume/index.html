@@ -1,0 +1,247 @@
+<style>
+  @font-face {
+    font-family: "Valkyrie";
+    src: url("/fonts/valkyrie-t4-regular.woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Valkyrie";
+    src: url("/fonts/valkyrie-t4-bold.woff2");
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Valkyrie";
+    src: url("/fonts/valkyrie-t4-italic.woff2");
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Concourse";
+    src: url("/fonts/concourse-t3-regular.woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Concourse";
+    src: url("/fonts/concourse-t6-regular.woff2");
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  :root {
+    --body-font: "Valkyrie", Constantia, "Lucida Bright", Lucidabright,
+      "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif",
+      "Liberation Serif", Georgia, serif;
+
+    --header-font: "Concourse", Frutiger, "Frutiger Linotype", Univers, Calibri,
+      "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed",
+      "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue",
+      Helvetica, Arial, sans-serif;
+
+    --rhythm: 1.45rem;
+  }
+
+  html {
+    font-family: var(--body-font);
+    letter-spacing: 0.1px;
+    box-sizing: border-box;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  body {
+    margin: 0 auto;
+    padding: var(--rhythm);
+    box-sizing: border-box;
+    max-width: 8.5in;
+    line-height: 1.4;
+  }
+
+  @media print {
+    body {
+      padding: 0;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0 0 calc(var(--rhythm) / 4);
+    font-weight: bold;
+    line-height: 1.1;
+    font-family: var(--header-font);
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .split-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    box-shadow: 0 1px 0 0 currentColor;
+    color: #007acc;
+    text-decoration: none;
+  }
+
+  hr {
+    margin: var(--rhythm) 0;
+    padding: 0;
+    background: hsla(0, 0%, 0%, 0.2);
+    border: none;
+    height: 1px;
+  }
+
+  ul,
+  ol {
+    padding: 0 0 0 var(--rhythm);
+    margin: 0.25rem 0 calc(var(--rhythm) / 2);
+  }
+
+  .list-reset {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  li:not(:last-of-type) {
+  }
+
+  section + section {
+    margin-top: calc(var(--rhythm) / 2);
+  }
+
+  strong {
+    letter-spacing: 0.3px;
+  }
+</style>
+<main class="resume">
+  <section>
+    <h1>Adam Hammes</h1>
+    641-670-1400 &bull; adam@hammes.io
+  </section>
+  <section>
+    <h2>Work Experience</h2>
+    <p class="split-line">
+      <em>nventive, Quebec, QC</em>
+      <span>2018 - Present</span>
+    </p>
+    <p><strong>Full-Stack Web Developer</strong></p>
+    <ul>
+      <li>Worked on a wide variety</li>
+      <li>lorem ipsum</li>
+      <li>lorem ipsum</li>
+      <li>lorem ipsum</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Internship Experience</h2>
+    <ul class="list-reset">
+      <li>
+        <p class="split-line">
+          <em>Workiva, Ames Iowa</em>
+          <span>Summer 2016</span>
+        </p>
+        <p><strong>Software Development Intern</strong></p>
+        <ul>
+          <li>
+            Collaborated on a Dart/React front-end application used by a
+            majority Fortune 500 companies
+          </li>
+          <li>
+            Utilized continuous integration and delivery best-practices to
+            deliver a cutting-edge product
+          </li>
+          <li>Coordinated testing blitzes for critical user-facing features</li>
+        </ul>
+      </li>
+      <li>
+        <p class="split-line">
+          <em>Compressor Controls Corporation, Des Moines Iowa</em>
+          <span>Summer 2015</span>
+        </p>
+        <p><strong>Software Development Intern</strong></p>
+        <ul>
+          <li>
+            Solo-developed a C#/WPF application deployed to engineering
+            companies worldwide
+          </li>
+          <li>Gathered requirements from field engineers and end-users</li>
+          <li>Participated in an Agile/Scrum based team process</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2>Related Projects</h2>
+    <ul class="list-reset">
+      <li>
+        <p class="split-line">
+          <em>CRN, Iowa State University</em>
+          <span>Fall 2014</span>
+        </p>
+        <p><strong>Researcher/Developer</strong></p>
+        <ul>
+          <li>
+            Led a team of undergraduates on a semester-long research project
+          </li>
+          <li>
+            Implemented a 1979 paper describing how to mathematically model sets
+            of chemical reactions
+          </li>
+          <li>
+            Presented research at the 2015 Stupka Undergraduate Research
+            Symposium
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p class="split-line">
+          <em>Pyfic, Personal Project</em>
+          <span>Fall 2016</span>
+        </p>
+        <p><strong>Developer</strong></p>
+        <ul>
+          <li>
+            Created a Python app to create electronic books from online sources
+          </li>
+          <li>Employed asynchronous I/O to conduct parallel page requests</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2>Education</h2>
+    <p class="split-line">
+      <em>Iowa State University</em>
+      <span>Graduated Fall 2017</span>
+    </p>
+    <p><strong>Bachelor of Computer Science</strong></p>
+    <p><span>3.58 GPA (Cum Laude, Phi Beta Kappa)</span></p>
+  </section>
+  <section>
+    <h2>Skills</h2>
+    <p>Python, C#, SQL, Java, Dart, JavaScript, React, Vue, Git</p>
+  </section>
+</main>
