@@ -1,5 +1,8 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <title>Adam Hammes's Résumé</title>
     <meta name="viewport" content="width=device-width" />
     <style>
       @font-face {
@@ -119,6 +122,11 @@
 
       ul,
       ol {
+        list-style-type: disc;
+      }
+
+      ul,
+      ol {
         padding: 0 0 0 var(--rhythm);
         margin: 0.25rem 0 calc(var(--rhythm) / 2);
       }
@@ -146,24 +154,31 @@
       </section>
       <section>
         <h2>Work Experience</h2>
-        <p class="split-line">
-          <em>nventive, Quebec, QC</em>
-          <span>2018 - Present</span>
-        </p>
-        <p><strong>Full-Stack Web Developer</strong></p>
-        <ul>
+        <ul class="list-reset">
           <li>
-            Shipped several medium-scale projects from conception to production
-          </li>
-          <li>
-            Established and enforced development and code review best practices
-          </li>
-          <li>
-            Improved developer productivity through documentation and tooling
-          </li>
-          <li>
-            Refactored major subsystems, improving system stability and customer
-            satisfaction
+            <p class="split-line">
+              <em>nventive, Quebec, QC</em>
+              <span>2018 - Present</span>
+            </p>
+            <p><strong>Full-Stack Web Developer</strong></p>
+            <ul>
+              <li>
+                Shipped several medium-scale projects from conception to
+                production
+              </li>
+              <li>
+                Established and enforced development and code review best
+                practices
+              </li>
+              <li>
+                Improved developer productivity through documentation and
+                tooling
+              </li>
+              <li>
+                Refactored major subsystems, improving system stability and
+                customer satisfaction
+              </li>
+            </ul>
           </li>
         </ul>
       </section>
