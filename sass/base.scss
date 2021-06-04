@@ -1,6 +1,10 @@
 @import "normalize";
 @import "markdown";
 
+.hidden {
+  display: none !important;
+}
+
 .header__container {
   margin: var(--rhythm) 0;
 }

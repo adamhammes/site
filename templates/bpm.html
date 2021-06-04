@@ -1,0 +1,109 @@
+{% extends "page.html" %}
+<!-- prettier-ignore -->
+{% block title %}
+  BPM Calculator
+{% endblock %}
+<!-- prettier-ignore -->
+{% block description %}
+  A tool for calculating the speed of a piece of music
+{% endblock %}
+<!-- prettier-ignore -->
+{% block content %}
+
+<style>
+  .tap-zone {
+    border-radius: 0.375rem;
+    padding: 4rem 2rem;
+    border: thin solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: white;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  .bpm-display-container {
+    margin-top: var(--rhythm);
+  }
+</style>
+
+<h1>Beats per minute calculator</h1>
+
+<p>
+  Beats per minute, or BPM, measures the speed of music. If a piece says ♩= 145,
+  then you should play 145 quarter notes per minute, and the BPM is also 145.
+</p>
+
+<p>You can use this tool to measure the bpm of a piece you are listening to:</p>
+
+<button class="tap-zone">
+  Press your spacebar or click inside this area in time with the music.
+</button>
+
+<div class="bpm-display-container hidden">BPM: <b class="bpm-display"></b></div>
+
+<script>
+  (function () {
+    let tapTimes = [];
+    // number of taps to consider when calculating the BPM
+    const window_interval = 5;
+    // time to wait before resetting the count
+    const max_tap_delay_ms = 3 * 1000;
+    let tap_delay_timer = null;
+
+    function clearTaps() {
+      console.log("clearings taps");
+      tapTimes = [];
+    }
+
+    function onTap() {
+      tapTimes.push(Date.now());
+      if (tap_delay_timer != null) {
+        window.clearTimeout(tap_delay_timer);
+      }
+
+      tap_delay_timer = window.setTimeout(clearTaps, max_tap_delay_ms);
+
+      if (tapTimes.length < 2) {
+        return;
+      }
+
+      if (tapTimes.length > window_interval) {
+        tapTimes = tapTimes.splice(1);
+      }
+
+      const timeElapsedMs = tapTimes[tapTimes.length - 1] - tapTimes[0];
+      const averageTimeMs = timeElapsedMs / (tapTimes.length - 1);
+
+      const bpm = (60 * 1000) / averageTimeMs;
+      displayBPM(bpm);
+      console.log(bpm);
+    }
+
+    function displayBPM(bpm) {
+      document
+        .querySelector(".bpm-display-container")
+        .classList.remove("hidden");
+
+      const formattedBpm = bpm.toFixed(0);
+      document.querySelector(".bpm-display").textContent = formattedBpm;
+    }
+
+    document.addEventListener("keydown", (event) => {
+      if (event.code === "Space") {
+        event.preventDefault();
+        onTap();
+      }
+    });
+
+    document.addEventListener("click", (event) => {
+      if (event.target.closest(".tap-zone")) {
+        onTap();
+      }
+    });
+  })();
+</script>
+
+{% endblock content %}

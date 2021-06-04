@@ -17,5 +17,6 @@ In my free time, I enjoy playing piano and swing dancing.
 
 ## Links:
 
-- [My written articles](/articles)
-- [All the recipes](/recipes) I've cared to save on my site.
+- [My written articles](/articles/)
+- [All the recipes](/recipes/) I've cared to save on my site.
+- [A tool for calculating beats per minute](/bpm/)
