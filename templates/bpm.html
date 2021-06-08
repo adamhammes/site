@@ -58,7 +58,7 @@
     }
 
     function onTap() {
-      tapTimes.push(Date.now());
+      tapTimes.push(performance.now());
       if (tap_delay_timer != null) {
         window.clearTimeout(tap_delay_timer);
       }
