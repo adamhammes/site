@@ -54,7 +54,6 @@
     let tap_delay_timer = null;
 
     function clearTaps() {
-      console.log("clearings taps");
       tapTimes = [];
     }
 
@@ -79,7 +78,6 @@
 
       const bpm = (60 * 1000) / averageTimeMs;
       displayBPM(bpm);
-      console.log(bpm);
     }
 
     function displayBPM(bpm) {
