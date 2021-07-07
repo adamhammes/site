@@ -141,6 +141,10 @@
         margin-top: calc(var(--rhythm) / 2);
       }
 
+      p:not(.split-line) + p {
+        margin-top: calc(var(--rhythm) / 4);
+      }
+
       strong {
         letter-spacing: 0.3px;
       }
@@ -158,25 +162,31 @@
           <li>
             <p class="split-line">
               <em>nventive, Quebec, QC</em>
-              <span>2018 - Present</span>
+              <span>2018 - 2021</span>
             </p>
-            <p><strong>Full-Stack Web Developer</strong></p>
+            <p>
+              Nventive is a French-Canadian enterprise offering strategy,
+              design, and development services. I initially specialized as a
+              frontend web developer, then gradually broadened out to full-stack
+              development.
+            </p>
+            <p>Notable contributions:</p>
             <ul>
               <li>
-                Shipped several medium-scale projects from conception to
-                production
+                Rewrote a key PDF generation pipeline, reducing the developer
+                edit/compile/run time from 3 minutes to 10 seconds and allowing
+                more control over the rendered PDFs.
               </li>
               <li>
-                Established and enforced development and code review best
-                practices
+                Created a system for developing and documenting shared frontend
+                components. Worked closely with the team's designer to
+                standardize the existing components into a coherent design
+                system.
               </li>
               <li>
-                Improved developer productivity through documentation and
-                tooling
-              </li>
-              <li>
-                Refactored major subsystems, improving system stability and
-                customer satisfaction
+                Tackled performance problems with database usage; addition of
+                missing indexes and elimination of N + 1 queries sped up average
+                user-facing load times by a factor of three.
               </li>
             </ul>
           </li>
@@ -223,43 +233,20 @@
         </ul>
       </section>
       <section>
-        <h2>Related Projects</h2>
+        <h2>Side Projects</h2>
         <ul class="list-reset">
           <li>
-            <p class="split-line">
-              <em>CRN, Iowa State University</em>
-              <span>Fall 2014</span>
+            <p>
+              <em>À la carte, https://alacarte.hammes.io/en/</em>
             </p>
-            <p><strong>Researcher/Developer</strong></p>
-            <ul>
-              <li>
-                Led a team of undergraduates on a semester-long research project
-              </li>
-              <li>
-                Implemented a 1979 paper describing how to mathematically model
-                sets of chemical reactions
-              </li>
-              <li>
-                Presented research at the 2015 Stupka Undergraduate Research
-                Symposium
-              </li>
-            </ul>
-          </li>
-          <li>
-            <p class="split-line">
-              <em>Pyfic, Personal Project</em>
-              <span>Fall 2016</span>
+
+            <p>
+              An apartment-searching tool that I initially created for my move
+              to Quebec, but later opened up for public use. Scrapes offers from
+              kijiji.ca, cleans up the data, and plots the data on a map using
+              Gatsby + Leaflet along with several convenient filters. Source
+              available on Github.
             </p>
-            <p><strong>Developer</strong></p>
-            <ul>
-              <li>
-                Created a Python app to create electronic books from online
-                sources
-              </li>
-              <li>
-                Employed asynchronous I/O to conduct parallel page requests
-              </li>
-            </ul>
           </li>
         </ul>
       </section>
@@ -274,7 +261,10 @@
       </section>
       <section>
         <h2>Skills</h2>
-        <p>Python, C#, SQL, Java, Dart, JavaScript, React, Vue, Git</p>
+        <p>
+          Python, C#, SQL, Java, Dart, JavaScript, .Net Core, React, Vue, Git,
+          Scrapy, Leaflet
+        </p>
       </section>
     </main>
   </body>
