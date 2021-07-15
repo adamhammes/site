@@ -6,7 +6,7 @@ command = "zola build"
 
 [build.environment]
 # Set the version name that you want to use and Netlify will automatically use it.
-ZOLA_VERSION = "0.12.2"
+ZOLA_VERSION = "0.13.0"
 
 # For some reason, Netlify prints out this warning when building the site:
 #
