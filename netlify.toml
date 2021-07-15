@@ -8,17 +8,6 @@ command = "zola build"
 # Set the version name that you want to use and Netlify will automatically use it.
 ZOLA_VERSION = "0.13.0"
 
-# For some reason, Netlify prints out this warning when building the site:
-#
-#     ** WARNING **
-#     Using custom ruby version 2.3.6, this will slow down the build.
-#     To ensure fast builds, set the RUBY_VERSION environment variable, or .ruby-version file, to an included ruby version.
-#     Included versions: 2.7.1 2.6.2
-#
-# We'll set the version as the warning mentions, which should speed up
-# deployments by ~20 seconds.
-RUBY_VERSION = "2.7.1"
-
 # The magic for deploying previews of branches.
 # We need to override the base url with whatever url Netlify assigns to our
 # preview site.  We do this using the Netlify environment variable
