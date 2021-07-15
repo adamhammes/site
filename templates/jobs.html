@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/who-is-hiring.css" />
+  </head>
+  <body>
+    <h1>{{ page.title }}</h1>
+    <p>Type here to start searching jobs:</p>
+    <input class="search-input" type="text" id="search" />
+    <ul id="results" class="results-grid"></ul>
+    <script src="https://unpkg.com/lunr@2.3.9/lunr.min.js"></script>
+
+    <!-- prettier-ignore -->
+    {% set base_file_name = page.extra.thread_date %}
+    {% set json_path = "static/who-is-hiring-data/" ~ page.extra.thread_date ~ ".json"%}
+    {% set jobs = load_data(path=json_path)%}
+    <script type="application/json" id="jobs-data">
+      {{ jobs | json_encode }}
+    </script>
+    <script>
+      function htmlDecode(text) {
+        var e = document.createElement("textarea");
+        e.innerHTML = text;
+        return e.value;
+      }
+
+      function renderJobs(jobs) {
+        const jobsHtml = jobs.map((job) => {
+          const lines = job.text.split(/\n/g);
+          const [firstLine, followingLines] = [
+            lines[0],
+            lines.slice(1, lines.length - 1),
+          ];
+          return `
+                <li class="result-view" >
+                  <div class="clamped"
+                  ><div class="byline"
+                    >${firstLine}</div>${followingLines.join("\n")}</div>
+                </li>
+              `;
+        });
+        document.querySelector("#results").innerHTML = jobsHtml.join("");
+      }
+
+      const start = performance.now();
+      const jsonText = htmlDecode(
+        document.querySelector("#jobs-data").textContent.trim()
+      );
+      const allJobs = JSON.parse(jsonText);
+      console.log(`parse in ${performance.now() - start}`);
+      renderJobs(allJobs);
+      console.log(`render in ${performance.now() - start}`);
+
+      const jobLookup = new Map(allJobs.map((j) => [j.id.toString(), j]));
+
+      const index = lunr(function () {
+        this.ref("id");
+        this.field("text");
+
+        allJobs.forEach(function (job) {
+          this.add(job);
+        }, this);
+      });
+
+      console.log(`index in ${performance.now() - start}`);
+
+      document.querySelector("#search").addEventListener("input", (event) => {
+        if (!event.target.value) {
+          renderJobs(allJobs);
+          return;
+        }
+
+        const searchResults = event.target.value
+          ? index.search(event.target.value)
+          : jobs;
+        const jobs = searchResults.map((sr) => jobLookup.get(sr.ref));
+        renderJobs(jobs);
+      });
+    </script>
+  </body>
+</html>

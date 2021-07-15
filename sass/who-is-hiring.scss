@@ -1,0 +1,41 @@
+@import "normalize";
+@import "markdown";
+
+body {
+  background-color: rgb(235, 239, 243);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  max-width: 40rem;
+}
+
+.search-input {
+  border-radius: 4px;
+  padding: 8px;
+  box-shadow: none;
+  border: thin solid #d4d4d4;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  padding: var(--rhythm) 0;
+  gap: var(--rhythm);
+  list-style-type: none;
+  align-items: flex-start;
+}
+
+.result-view {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px 0px;
+  border-radius: 4px;
+  padding: calc(var(--rhythm) / 2);
+}
+
+.byline {
+  font-weight: 700;
+}
+
+.clamped {
+  white-space: pre-line;
+}
