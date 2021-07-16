@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adam Hammes's Cover Letter</title>
+    <link rel="stylesheet" href="/cover-letters/cover-letter.css" />
+    <style>
+      @font-face {
+        font-family: "Valkyrie";
+        src: url("/fonts/valkyrie-t4-regular.woff2");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Valkyrie";
+        src: url("/fonts/valkyrie-t4-bold.woff2");
+        font-weight: bold;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Valkyrie";
+        src: url("/fonts/valkyrie-t4-italic.woff2");
+        font-weight: normal;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: "Concourse";
+        src: url("/fonts/concourse-t3-regular.woff2");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Concourse";
+        src: url("/fonts/concourse-t6-regular.woff2");
+        font-weight: bold;
+        font-style: normal;
+      }
+
+      :root {
+        --body-font: "Valkyrie", Constantia, "Lucida Bright", Lucidabright,
+          "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif",
+          "Liberation Serif", Georgia, serif;
+
+        --header-font: "Concourse", Frutiger, "Frutiger Linotype", Univers,
+          Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad,
+          "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma,
+          Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+        --rhythm: 1.45rem;
+      }
+
+      html {
+        font-family: var(--body-font);
+        letter-spacing: 0.1px;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0 auto;
+        padding: var(--rhythm);
+        box-sizing: border-box;
+        max-width: 8.5in;
+        line-height: 1.4;
+        font-size: 1rem;
+      }
+
+      body > * + * {
+        margin-top: var(--rhythm);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0 0 calc(var(--rhythm) / 4);
+        font-weight: bold;
+        line-height: 1.1;
+        font-family: var(--header-font);
+      }
+
+      address {
+        font-style: normal;
+        text-align: right;
+      }
+
+      .top-divider {
+        border-top: thin solid black;
+        border-bottom: thin solid black;
+        height: calc(var(--rhythm) / 4);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Adam Hammes</h1>
+    <div class="top-divider"></div>
+    <address style="text-align: right; margin: var(--rhythm) 0">
+      115 Rosenberger Avenue
+      <br />
+      Oskaloosa, IA 52577
+      <br />
+      641-673-5240
+      <br />
+      adam@hammes.io
+    </address>
+    {{ page.content | safe}}
+  </body>
+</html>

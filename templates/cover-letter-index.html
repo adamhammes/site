@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block title %}{{ section.title }}{% endblock title
+%} {% block content %}
+<h1 class="title">{{ section.title }}</h1>
+<ul class="listing__list">
+  {% for page in section.pages %}
+  <li>
+    <article>
+      <h2><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h2>
+      <p>
+        Link to job posting:
+        <a href="{{ page.extra.job_link }}" target="_blank" rel="noreferrer"
+          >{{ page.extra.job_link }}</a
+        >
+      </p>
+      <p>
+        Keywords:
+        <!-- prettier-ignore -->
+        {% for word in page.extra.keywords %}
+          {{ word }}{% if not loop.last %},{% endif %}
+        {% endfor %}
+      </p>
+    </article>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock content %}

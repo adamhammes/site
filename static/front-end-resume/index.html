@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Adam Hammes's Résumé</title>
+    <meta name="viewport" content="width=device-width" />
+    <style>
+      @font-face {
+        font-family: "Valkyrie";
+        src: url("/fonts/valkyrie-t4-regular.woff2");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Valkyrie";
+        src: url("/fonts/valkyrie-t4-bold.woff2");
+        font-weight: bold;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Valkyrie";
+        src: url("/fonts/valkyrie-t4-italic.woff2");
+        font-weight: normal;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: "Concourse";
+        src: url("/fonts/concourse-t3-regular.woff2");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Concourse";
+        src: url("/fonts/concourse-t6-regular.woff2");
+        font-weight: bold;
+        font-style: normal;
+      }
+
+      :root {
+        --body-font: "Valkyrie", Constantia, "Lucida Bright", Lucidabright,
+          "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif",
+          "Liberation Serif", Georgia, serif;
+
+        --header-font: "Concourse", Frutiger, "Frutiger Linotype", Univers,
+          Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad,
+          "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma,
+          Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+        --rhythm: 1.45rem;
+      }
+
+      html {
+        font-family: var(--body-font);
+        letter-spacing: 0.1px;
+        box-sizing: border-box;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+
+      body {
+        margin: 0 auto;
+        padding: var(--rhythm);
+        box-sizing: border-box;
+        max-width: 8.5in;
+        line-height: 1.4;
+        font-size: 1rem;
+      }
+
+      @media print {
+        body {
+          padding: 0;
+        }
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0 0 calc(var(--rhythm) / 4);
+        font-weight: bold;
+        line-height: 1.1;
+        font-family: var(--header-font);
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .split-line {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      a {
+        box-shadow: 0 1px 0 0 currentColor;
+        color: #007acc;
+        text-decoration: none;
+      }
+
+      hr {
+        margin: var(--rhythm) 0;
+        padding: 0;
+        background: hsla(0, 0%, 0%, 0.2);
+        border: none;
+        height: 1px;
+      }
+
+      ul,
+      ol {
+        list-style-type: disc;
+      }
+
+      ul,
+      ol {
+        padding: 0 0 0 var(--rhythm);
+        margin: 0.25rem 0 calc(var(--rhythm) / 2);
+      }
+
+      .list-reset {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+      }
+
+      section + section {
+        margin-top: calc(var(--rhythm) / 2);
+      }
+
+      p:not(.split-line) + p {
+        margin-top: calc(var(--rhythm) / 4);
+      }
+
+      strong {
+        letter-spacing: 0.3px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="resume">
+      <section>
+        <h1>Adam Hammes</h1>
+        641-670-1400 &bull; adam@hammes.io
+      </section>
+      <section>
+        <h2>Work Experience</h2>
+        <ul class="list-reset">
+          <li>
+            <p class="split-line">
+              <em>nventive, Quebec, QC</em>
+              <span>2018 - 2021</span>
+            </p>
+            <p><strong>Front-End Software Engineer</strong></p>
+            <p>
+              At nventive, I worked on a wide variety of projects, ranging from
+              server-side rendered landing pages to thick-client single page
+              applications.
+            </p>
+            <p>Notable contributions:</p>
+            <ul>
+              <li>
+                Created a system for developing and documenting shared frontend
+                components. Worked closely with the team's designer to move the
+                existing components into a coherent design system.
+              </li>
+              <li>
+                Optimized the canvas 3D drawing pipeline, reducing page load
+                time by almost 500ms
+              </li>
+              <li>
+                Introduced BEM naming into the team's CSS, increasing uniformity
+                in the codebase
+              </li>
+              <li>
+                Wrote scripts to simplify the upload of images to the site,
+                speeding up other developers and improving caching of static
+                assets
+              </li>
+
+              <li>
+                Rewrote a key PDF generation process, reducing the developer
+                edit/compile/run time from 3 minutes to 10 seconds and allowing
+                more control over the rendered PDFs.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Internship Experience</h2>
+        <ul class="list-reset">
+          <li>
+            <p class="split-line">
+              <em>Workiva, Ames, IA</em>
+              <span>Summer 2016</span>
+            </p>
+            <p><strong>Front-End Software Developer</strong></p>
+            <ul>
+              <li>
+                Collaborated on a Dart/React front-end application used by a
+                majority of Fortune 500 companies
+              </li>
+              <li>
+                Gained experience in both unit testing and integration testing
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p class="split-line">
+              <em>Compressor Controls Corporation, Des Moines, IA</em>
+              <span>Summer 2015</span>
+            </p>
+            <p><strong>Software Developer</strong></p>
+            <ul>
+              <li>
+                Solo-developed a C#/WPF application to control compressor
+                engines, deployed to turbine engines world-wide
+              </li>
+              <li>
+                Iterated quickly on the product while gathering requirements
+                from field engineers and end-users
+              </li>
+              <li>
+                Replaced configuration hard-coded in the application with
+                external XML files, allowing easier addition of new products
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Side Projects</h2>
+        <ul class="list-reset">
+          <li>
+            <p>
+              <em>À la carte, https://alacarte.hammes.io/en/</em>
+            </p>
+
+            <p>
+              An apartment-searching tool that I initially created for my move
+              to Quebec, but later opened up for public use. Scrapes offers from
+              kijiji.ca, cleans up the data, and plots the data on a map using
+              Gatsby + Leaflet along with several convenient filters. Source
+              available on Github.
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Education</h2>
+        <p class="split-line">
+          <em>Iowa State University</em>
+          <span>Graduated Fall 2017</span>
+        </p>
+        <p><strong>Bachelor of Computer Science</strong></p>
+        <p><span>3.58 GPA (Cum Laude, Phi Beta Kappa)</span></p>
+      </section>
+      <section>
+        <h2>Technologies</h2>
+        <p>
+          Typescript, Javascript, React, Vue, Python, C#, SQL, Java, Dart, .Net
+          Core, Git, Scrapy, Leaflet
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
