@@ -16,7 +16,7 @@ keywords = ["React", "CSS", "Javascript", "Typescript", "Storybook"]
     * Storybook
 -->
 
-July 15th, 2021
+July 15, 2021
 
 10x Genomics
 <br>
@@ -28,14 +28,15 @@ It is with genuine enthusiasm that I submit my application for the position of f
 As a front-end developer with close to four years of professional experience, I know that my diverse skill set will make me an asset to the team.
 
 I believe that software development is fundamentally a process of sharing knowledge.
-That's why in my time at nventive, I popularized the use of Storybook for developing and documenting our React components.
-At the same time, I worked closely with the team's designer to learn the "logic" behind his designs, as well as to teach him what could and couldn't be easily done with CSS.
+At Nventive, I popularized the use of Storybook for developing and documenting our React components.
+In doing so, I worked closely with the team's designer to learn the logic behind his designs.
+In return, I taught him the capabilities and limitations of CSS.
 This type of tight collaboration is what I hope to bring to my time at 10x Genomics.
 
-A tenet I hold dear is that web fundamentals (HTML, CSS, and Javascript) are the key to being a productive front-end developer.
-Understanding how frameworks work under the hood is key to using them correctly, and I can't count the number of times two lines of CSS has saved me 30 lines of Javascript.
-At the same time, I'm not afraid to adopt new tools as they present themselves.
-Every front-end project that I have started at work beings the same way: Installing Typescript and enabling strict mode.
+Web fundamentals (HTML, CSS, and Javascript) are essential to being a productive front-end developer.
+Understanding how frameworks work under the hood is key to using them correctly, and I can not count the number of times two lines of CSS has saved me 30 lines of Javascript.
+At the same time, I am quick to learn new tools as they present themselves.
+I begin all of my professional projects the same way: Installing Typescript and enabling strict mode.
 
 "Mastering biology to advance human health."
 10x Genomics's mission statement is undeniably noble, and I am excited at the opportunity to work towards realizing it.

@@ -19,25 +19,25 @@ It is with genuine enthusiasm that I submit my application for the position of f
 As a full-stack developer with close to four years of professional experience, I know that my diverse skill set will make me an asset to the team.
 
 One of my defining qualities is tenacious problem-solving.
-When I reworked our application's PDF rendering system, it wasn't with a single "silver bullet" change, but rather a series of small iterative improvements:
+When I reworked my previous project's PDF rendering system, it was not with a single "silver bullet" change, but rather a series of small iterative improvements:
 
-- Rigorous profiling led me to pinpoint slow splots in the rendering pipeline
-- Faster PDF generation allowed the front-end to substitute long-polling for a single HTTP call
-- Perusing documentation turned up a method to modify PDF templates without recompiling
+1. Rigorous profiling led me to pinpoint slow splots in the rendering pipeline
+1. Faster PDF generation let the front-end make a single HTTP call instead of long-polling
+1. Perusing documentation turned up a method to modify PDF templates without recompiling
 
 The result?
-Improved performance for our customers, as well as a vastly better dev experience.
+Improved performance for our customers as well as a vastly better dev experience.
 
 Clear communication has also played a key role in my career.
-When our designer remarked that a lot of visual inconsistencies were slipping through code review, I sat down with him to write a cheat sheet of his design process.
-I presented that document to the front-end team, and we were able to more consistently nail those pixel-perfect designs.
+When our designer remarked that many visual inconsistencies were slipping through code review, I sat down with him to write a cheat sheet of his design process.
+I presented that document to the front-end team and we were able to more consistently nail those pixel-perfect designs.
 
-Lastly, from a more technical perspective, Jamstack is my jam (yes, I'm known for my bad puns).
-When I last moved, I built a site to help search through the apartments on the market.
+Lastly, from a more technical perspective, Jamstack is my jam (yes, I am known for my bad puns).
+When I moved abroad to Québec, I built a site to search through apartments on the market.
 The site was a static Gatsby application, generated daily through a cron job.
 This architecture allowed the site to scale to hundreds of daily users and thousands of apartments, all without having to scale a single server.
 
-In conclusion, I am excited for the opportunity to join Hinge Health in revolutionizing musculoskeletal care.
+I am excited for the opportunity to join Hinge Health in revolutionizing musculoskeletal care.
 I appreciate your consideration and look forward to hearing from you.
 
 Warmest regards,
