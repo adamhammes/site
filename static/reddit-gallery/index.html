@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Reddit Gallery</title>
+
+    <style>
+      body {
+        max-width: 30rem;
+        margin: 2rem auto 4rem;
+      }
+
+      #search-input {
+        margin-top: 1rem;
+      }
+
+      #comic-holder {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    Reddit Gallery
+
+    <form id="search-form">
+      <input id="search-input" type="text" />
+    </form>
+
+    <div id="comic-holder"></div>
+    <script>
+      const searchForm = document.getElementById("search-form");
+      const searchInput = document.getElementById("search-input");
+      const comicHolder = document.getElementById("comic-holder");
+
+      const queryGallery = async (e) => {
+        e.preventDefault();
+        const searchText = searchInput.value;
+        const apiLink = searchText + ".json";
+        const res = await fetch(apiLink);
+        const json = await res.json();
+        console.log(json);
+        const galleryItems =
+          json[0].data.children[0].data.gallery_data.items.map(
+            (item) => item.media_id
+          );
+
+        const imgTags = galleryItems.map(
+          (image) => `<img src="https://i.redd.it/${image}.jpg" />`
+        );
+        const slop = imgTags.join("\n");
+        comicHolder.innerHTML = slop;
+        searchInput.blur();
+      };
+
+      const selectInputOnFocus = () => {
+        searchInput.select();
+      };
+
+      searchInput.addEventListener("focus", selectInputOnFocus);
+      searchForm.addEventListener("submit", queryGallery);
+    </script>
+  </body>
+</html>
