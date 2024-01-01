@@ -12,8 +12,6 @@ description = "From The New York Time's famous recipe"
 - 2 tsp (8 grams) kosher salt
 - 345 grams water
 
-\* If using sweetened applesauce, cut back on the sugar accordingly.
-
 ## Directions
 
 1. In a large bowl combine flour, yeast and salt.
