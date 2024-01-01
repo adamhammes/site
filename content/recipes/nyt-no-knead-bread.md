@@ -1,0 +1,31 @@
++++
+title = "No-Knead Bread"
+date = 2023-12-31T18:26:22-06:00
+draft = false
+description = "From The New York Time's famous recipe"
++++
+
+## Ingredients
+
+- 430g flour
+- 1/4 tsp (1 gram) instant yeast
+- 2 tsp (8 grams) kosher salt
+- 345 grams water
+
+\* If using sweetened applesauce, cut back on the sugar accordingly.
+
+## Directions
+
+1. In a large bowl combine flour, yeast and salt.
+   Add 1½ cups/345 grams water and stir until blended; dough will be shaggy and sticky.
+   Cover bowl with plastic wrap.
+   Let dough rest at least 12 hours, preferably about 18, at warm room temperature, about 70 degrees.
+
+2. Dough is ready when its surface is dotted with bubbles.
+   Lightly flour a work surface and place dough on it; sprinkle it with a little more flour and fold it over on itself once or twice.
+   Cover loosely with plastic wrap and let rest about 15 minutes.
+
+3. Using just enough flour to keep dough from sticking to work surface or to your fingers, gently and quickly shape dough into a ball.
+   Generously coat parchment paper with flour, wheat bran or cornmeal; put dough seam side down on paper and dust with more flour, bran or cornmeal.
+   Cover with a cotton towel and let rise for about 2 hours.
+   When it is ready, dough will be more than double in size and will not readily spring back when poked with a finger.
