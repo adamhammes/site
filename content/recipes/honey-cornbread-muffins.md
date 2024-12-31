@@ -9,15 +9,15 @@ description = "Much sweeter than the store-bought mix, with a cake-like texture.
 
 ## Ingredients
 
-- 1 cup yellow cornmeal
-- 1 cup all-purpose flour
+- 1 cup yellow cornmeal (155 grams)
+- 1 cup all-purpose flour (140 grams)
 - 1 tbsp baking powder
 - 1/2 cup granulated sugar
 - 1 tsp salt
 - 1 cup whole milk
 - 2 large eggs
 - 1/2 stick butter, melted
-- 1/4 cup honey
+- 1/4 cup honey (85 grams)
 - 12 paper muffin cups
 - 12-cup muffin tin
 
