@@ -1,0 +1,104 @@
+<head>
+  <style>
+    div {
+      padding: 1in 2in 2.5in;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      page-break-after: always;
+      background: black;
+      max-width: 5in;
+      margin: 0 auto;
+    }
+
+    .reversed * {
+      visibility: hidden;
+    }
+
+    .dash {
+      font-weight: bold;
+      display: inline-block;
+      background: white;
+      height: 0.1em;
+      width: 0.4em;
+      margin: 0 0.1em;
+      content: "";
+      color: black;
+    }
+
+    img {
+      display: inline-block;
+      height: 1em;
+      filter: invert(100%);
+    }
+
+    img[src*="9"],
+    img[src*="8"],
+    img[src*="5"] {
+      transform: translateY(4%);
+    }
+
+    .size-0-2 {
+      font-size: 0.2in;
+    }
+
+    .size-0-2-2-5 {
+      font-size: 0.225in;
+    }
+
+    .size-0-2-5 {
+      font-size: 0.25in;
+    }
+
+    .size-0-3-3 {
+      font-size: 0.33in;
+    }
+
+    .size-0-4 {
+      font-size: 0.4in;
+    }
+
+    .size-0-4-5 {
+      font-size: 0.45in;
+    }
+
+    .size-0-5 {
+      font-size: 0.5in;
+    }
+
+    .size-0-6 {
+      font-size: 0.6in;
+    }
+
+    .size-0-7-5 {
+      font-size: 0.75in;
+    }
+
+    .size-1 {
+      font-size: 1in;
+    }
+  </style>
+</head>
+<body>
+  <div class="size-0-5">
+    <img src="/stencils/stencil-S.jpg" />
+    <img src="/stencils/stencil-S.jpg" />
+    <img src="/stencils/stencil-B.jpg" />
+    <img src="/stencils/stencil-N.jpg" />
+    <span class="dash">-</span>
+    <img src="/stencils/stencil-5.jpg" />
+    <img src="/stencils/stencil-9.jpg" />
+    <img src="/stencils/stencil-8.jpg" />
+  </div>
+  <div class="size-0-5 reversed">
+    <img src="/stencils/stencil-S.jpg" />
+    <img src="/stencils/stencil-S.jpg" />
+    <img src="/stencils/stencil-B.jpg" />
+    <img src="/stencils/stencil-N.jpg" />
+    <span class="dash">-</span>
+    <img src="/stencils/stencil-5.jpg" />
+    <img src="/stencils/stencil-9.jpg" />
+    <img src="/stencils/stencil-8.jpg" />
+  </div>
+</body>
