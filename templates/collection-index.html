@@ -31,7 +31,6 @@
         const visibleLinks = new Set(
           searchResults.map((result) => result.doc.id)
         );
-        console.log(searchResults);
         [...document.getElementsByClassName("listing__item")].forEach(
           (element) => {
             element.classList.toggle(
