@@ -17,8 +17,8 @@
   {% endfor %}
 </ul>
 {% if section.extra.searchable %}
-<script src="elasticlunr.min.js"></script>
-<script src="search_index.en.js"></script>
+<script src="/elasticlunr.min.js"></script>
+<script src="/search_index.en.js"></script>
 <script>
   const init = async () => {
     const lunr = elasticlunr.Index.load(window.searchIndex);
