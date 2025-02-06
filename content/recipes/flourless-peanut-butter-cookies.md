@@ -7,8 +7,8 @@ description = "Ridiculously easy recipe for when I'm running late to a party."
 
 ## Ingredients
 
-- 1 cup smooth peanut butter
-- 3/4 cup brown sugar
+- 1 cup (256 grams) smooth peanut butter
+- 3/4 cup (160 grams) brown sugar
 - 1/2 tsp baking soda
 - Pinch of salt
 - 1 large egg
