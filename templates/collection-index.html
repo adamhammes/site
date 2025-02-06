@@ -1,9 +1,11 @@
 {% extends "base.html" %} {% block title %}{{ section.title }}{% endblock title
-%} {% block content %}
+%} {% block content %} {% if section.extra.searchable %}
+<input type="text" id="index-search" />
+{% endif %}
 <h1 class="title">{{ section.title }}</h1>
 <ul class="listing__list">
   {% for page in section.pages %}
-  <li>
+  <li class="listing__item" id="{{ page.permalink | safe }}">
     <article>
       <h2><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h2>
       <time datetime="{{ page.date }}">
@@ -14,4 +16,33 @@
   </li>
   {% endfor %}
 </ul>
-{% endblock content %}
+{% if section.extra.searchable %}
+<script src="elasticlunr.min.js"></script>
+<script src="search_index.en.js"></script>
+<script>
+  const init = async () => {
+    const lunr = elasticlunr.Index.load(window.searchIndex);
+
+    document
+      .getElementById("index-search")
+      .addEventListener("input", (event) => {
+        const searchResults = lunr.search(event.target.value);
+        console.log(searchResults);
+        const visibleLinks = new Set(
+          searchResults.map((result) => result.doc.id)
+        );
+        console.log(searchResults);
+        [...document.getElementsByClassName("listing__item")].forEach(
+          (element) => {
+            element.classList.toggle(
+              "listing__item--hidden",
+              !visibleLinks.has(element.id)
+            );
+          }
+        );
+      });
+  };
+
+  init();
+</script>
+{% endif %} {% endblock content %}
