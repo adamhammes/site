@@ -3,6 +3,7 @@ title = "Paratha"
 date = "2025-02-11T15:48:00+00:00"
 draft = false
 description = "Flaky South Asian flatbread"
+original_link = "https://www.seriouseats.com/paratha-flaky-south-asian-flatbread"
 +++
 
 ## Ingredients
