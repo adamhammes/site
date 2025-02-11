@@ -1,6 +1,6 @@
 +++
-title = "Chimichurri"
 date = "2025-02-11T15:59:24+00:00"
+title = "Chimichurri Sauce"
 draft = false
 description = "The condiment of the summer"
 original_link = "https://www.cookwell.com/recipe/chimichurri"
