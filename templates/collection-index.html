@@ -1,5 +1,6 @@
 {% extends "base.html" %} {% block title %}{{ section.title }}{% endblock title
-%} {% block content %} {% if section.extra.searchable %}
+%} {% block description %}{{ section.description }}{% endblock description %} {%
+block content %} {% if section.extra.searchable %}
 <label>
   Search:
   <p>
