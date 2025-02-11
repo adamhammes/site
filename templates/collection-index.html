@@ -1,6 +1,11 @@
 {% extends "base.html" %} {% block title %}{{ section.title }}{% endblock title
 %} {% block content %} {% if section.extra.searchable %}
-<input type="text" id="index-search" />
+<label>
+  Search:
+  <p>
+    <input type="text" id="index-search" />
+  </p>
+</label>
 {% endif %}
 <h1 class="title">{{ section.title }}</h1>
 <ul class="listing__list">
