@@ -23,22 +23,30 @@
   const init = async () => {
     const lunr = elasticlunr.Index.load(window.searchIndex);
 
+    const getItemElements = () => [
+      ...document.getElementsByClassName("listing__item"),
+    ];
+
     document
       .getElementById("index-search")
       .addEventListener("input", (event) => {
+        if (!event.target.value) {
+          getItemElements().forEach((element) =>
+            element.classList.toggle("listing__item--hidden", false)
+          );
+          return;
+        }
         const searchResults = lunr.search(event.target.value);
         console.log(searchResults);
         const visibleLinks = new Set(
           searchResults.map((result) => result.doc.id)
         );
-        [...document.getElementsByClassName("listing__item")].forEach(
-          (element) => {
-            element.classList.toggle(
-              "listing__item--hidden",
-              !visibleLinks.has(element.id)
-            );
-          }
-        );
+        getItemElements().forEach((element) => {
+          element.classList.toggle(
+            "listing__item--hidden",
+            !visibleLinks.has(element.id)
+          );
+        });
       });
   };
 
