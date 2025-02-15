@@ -50,8 +50,8 @@ Cake:
 Buttercream:
 
 1. Start with the pudding base: Place the chocolate in the clean bowl of the stand mixer fitted with the paddle attachment. In a small saucepan, combine the milk and ¼ cup/50 grams of the sugar. Bring to a simmer over medium, stirring occasionally to dissolve the sugar, then remove from the heat and set aside.
-
-1. In a medium bowl, add the cocoa powder, flour, salt and remaining ¼ cup/50 grams sugar, and whisk until combined. Add the yolks to the bowl and whisk slowly to combine (it will seem very thick at first, but will loosen up), then whisk more vigorously until the mixture is pale, thick and smooth.
+1. In a medium bowl, add the cocoa powder, flour, salt and remaining ¼ cup/50 grams sugar, and whisk until combined.
+1. Add the yolks to the bowl and whisk slowly to combine (it will seem very thick at first, but will loosen up), then whisk more vigorously until the mixture is pale, thick and smooth.
 1. Whisking the yolk mixture constantly, slowly stream in about half of the warm milk mixture, then whisk the contents of the bowl back into the saucepan. Set the saucepan over medium-low heat and cook, whisking constantly and scraping against the sides, until thick and bubbling, 1 to 3 minutes. Immediately scrape the pudding over the chocolate in the stand mixer bowl.
 1. Let the pudding mixture sit for a few minutes, so the heat gently melts the chocolate, then mix with the paddle on low speed until the chocolate is completely melted and the pudding is smooth and glossy. Increase the speed to medium and beat until the outside of the bowl is cool to the touch, 10 to 15 minutes. With the mixer running, add the butter a couple of pieces at a time, waiting for each addition to incorporate into the pudding before adding the next, until you have a smooth, glossy, spreadable frosting. Stop the mixer, thoroughly scrape the sides and bottom of the bowl, and add the vanilla. Beat once more just until evenly mixed.
 

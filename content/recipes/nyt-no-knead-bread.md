@@ -8,7 +8,7 @@ description = "From The New York Time's famous recipe"
 ## Ingredients
 
 - 430g flour
-- 1/4 tsp (1 gram) instant yeast
+- Generous 1/4 tsp (1 gram) instant yeast
 - 2 tsp (8 grams) kosher salt
 - 345 grams water
 
