@@ -7,7 +7,7 @@ description = "Using applesauce as a coagulant instead of eggs makes this cookie
 
 ## Ingredients
 
-- 1/2 cup peanut butter
+- 1/2 cup peanut butter (130 grams)
 - 3/4 tsp baking soda
 - 3 tbsp flour
 - 1/2 cup sugar
