@@ -6,10 +6,10 @@ description = "Chef John put it best: 'This is either the fanciest easy cookie r
 original_link = "https://www.allrecipes.com/recipe/282681/lace-cookies-florentine-cookies/"
 +++
 
-- 1 ½ cups whole raw almonds
+- 1 ½ cups whole raw almonds (170 grams)
 - ½ cup unsalted butter
-- ¾ cup light brown sugar
-- ¼ cup honey
+- ¾ cup light brown sugar (160 grams)
+- ¼ cup honey (85 grams)
 - ½ teaspoon vanilla extract
 - 1 pinch salt
 - 3 tablespoons all-purpose flour
