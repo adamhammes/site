@@ -8,20 +8,22 @@ original_link = "https://www.quakeroats.com/cooking-and-recipes/vanishing-oatmea
 
 ## Ingredients
 
-- 1-1/2 cups all-purpose flour
+- 1.5 cups (190 grams) all-purpose flour
 - 1 teaspoon baking soda
 - 1/2 teaspoon salt
 - 3 cup uncooked quick oats
 - 1/2 cup (1 stick) plus 6 tablespoons butter, softened
-- 3/4 cup firmly packed brown sugar
-- 1/2 cup granulated sugar
+- 3/4 cup (160 grams) firmly packed brown sugar\*
+- 1/2 cup (100 grams) granulated sugar
 - 2 eggs
 - 1 teaspoon vanilla
 - 1 1/3 cup chocolate chips
+- m & m's (optional)
 
-Optional:
+\* If you don't have brown sugar, substitute both the brown and white sugar with:
 
-- m & m's
+- 250 grams white sugar
+- 30 grams molasses
 
 ## Directions
 
