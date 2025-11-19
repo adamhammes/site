@@ -11,7 +11,7 @@ original_link = "https://www.quakeroats.com/cooking-and-recipes/vanishing-oatmea
 - 1.5 cups (190 grams) all-purpose flour
 - 1 teaspoon baking soda
 - 1/2 teaspoon salt
-- 3 cup uncooked quick oats
+- 3 cup (240 grams) uncooked quick oats
 - 1/2 cup (1 stick) plus 6 tablespoons butter, softened
 - 3/4 cup (160 grams) firmly packed brown sugar\*
 - 1/2 cup (100 grams) granulated sugar
