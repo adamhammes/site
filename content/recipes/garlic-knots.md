@@ -9,7 +9,7 @@ original_link = "https://sallysbakingaddiction.com/garlic-knots-recipe/#tasty-re
 Homemade Dough
 
 - 1 and 1/3 cups (320ml) warm water (between 100–110°F, 38–43°C)
-- 2 and 1/4 teaspoons instant yeast (1 standard packet)
+- 2 and 1/4 teaspoons (7g) instant yeast (1 standard packet)
 - 1 Tablespoon (13g) granulated sugar
 - 3 Tablespoons (45ml) olive oil or (43g) melted butter
 - 1 teaspoon salt
