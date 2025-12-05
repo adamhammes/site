@@ -4,7 +4,7 @@ title = "Glossy Fudge Brownies"
 original_link = "https://www.seriouseats.com/bravetart-glossy-fudge-brownies"
 +++
 
-Recipe taken from [Serious Eats](https://www.seriouseats.com/bravetart-glossy-fudge-brownies).
+Recipe taken from [Serious Eats](https://www.seriouseats.com/bravetart-glossy-fudge-brownies) ([youtube link](https://www.youtube.com/watch?v=x7Yz2ZuS5bo)).
 
 ## Ingredients
 
