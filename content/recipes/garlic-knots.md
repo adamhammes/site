@@ -59,10 +59,7 @@ Instructions
    After about 30 minutes, close the oven door to trap the air inside with the rising dough.
    When it’s doubled in size, remove from the oven.
 
-1. When the dough is ready, punch it down to release the air.
-   Using floured hands on a lightly floured work surface, shape the dough into a 16×5-inch (13x41cm) log.
-   Using a very sharp knife, pizza cutter, or bench scraper, slice into 16 1-inch strips.
-   Roll each strip into 8-inch ropes.
+1. Tear off 50 gram chunks of dough.
    Tie each into a knot.
    You can tuck the 2 ends of the knots underneath or leave them out—that’s up to you.
    Arrange the knots on 2 baking sheets lined with silicone baking mats or parchment paper.
