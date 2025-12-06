@@ -11,13 +11,18 @@ Recipe taken from [Serious Eats](https://www.seriouseats.com/bravetart-glossy-fu
 - 12 ounces unsalted butter (about 3 sticks; 340 g)
 - 6 ounces finely chopped dark chocolate, about 72% (about 1 cup; 170 g)
 - 16 ounces granulated sugar (about 2 1/4 cups; 450 g)
-- 2 ounces light brown sugar (about 1/4 cup, packed; 55 g)
+- 2 ounces light brown sugar (about 1/4 cup, packed; 55 g) \*
 - 1 3/4 teaspoons (4 g) Diamond Crystal kosher salt; for table salt, use about half as much by volume or the same weight
 - 6 large eggs, straight from the fridge (about 10 1/2 ounces; 295 g)
 - 1/2 ounce vanilla extract (about 1 tablespoon; 15 g)
 - 1 teaspoon instant espresso powder, such as Medaglia d’Oro (optional)
 - 4 1/2 ounces all-purpose flour, such as Gold Medal (about 1 cup, spooned; 125 g)
 - 4 ounces Dutch-process cocoa powder, such as Cacao Barry Extra Brute (about 1 1/3 cups, spooned; 115 g)
+
+\* If using molasses, replace both sugars with:
+
+- 2.5 cups white sugar (500 g)
+- 5 grams molasses
 
 ## Directions
 
