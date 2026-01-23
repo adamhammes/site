@@ -18,7 +18,7 @@ Recipe taken from [Day With Mei](https://www.daywithmei.com/triple-toasted-vanil
 - 1/2 teaspoon kosher salt 1.5 grams
 - 1g locust bean gum (optional, for texture)
 
-Instructions
+## Instructions
 
 1. Tip the milk powder into a cold skillet and set over medium low heat.
    Cook until a golden brown graham cracker color, about 5 minutes.
