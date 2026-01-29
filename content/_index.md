@@ -20,3 +20,4 @@ In my free time, I enjoy playing piano and swing dancing.
 - [My written articles](/articles/)
 - [All the recipes](/recipes/) I've cared to save on my site.
 - [A tool for calculating beats per minute](/bpm/)
+- [West Coast Playlists](/wcs-playlists)
