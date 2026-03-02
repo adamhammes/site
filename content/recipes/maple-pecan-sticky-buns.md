@@ -8,6 +8,8 @@ Recipe taken from [Sally's Baking Addiction](https://sallysbakingaddiction.com/m
 
 ## Ingredients
 
+Dough
+
 - 1 cup (240ml) whole milk, warmed to about 100°F (38°C)
 - 2/3 cup (135g) granulated sugar, divided
 - 1 and 1/2 Tablespoons (14g) active dry or instant yeast (2 standard size packets)
