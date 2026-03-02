@@ -7,12 +7,12 @@ description = "A peanut butter/chocolate/oats smorgasbord cooked on the stovetop
 
 ## Ingredients
 
-- 1 1/2 cups sugar
-- 1/2 cup milk
+- 1 1/2 (300 grams) cups sugar
+- 1/2 cup (122 grams) milk
 - 1 stick (8 tablespoons) unsalted butter
 - 1/4 cup unsweetened cocoa powder
 - 3 cups old-fashioned rolled oats
-- 1 cup smooth peanut butter
+- 1 cup (250 grams) smooth peanut butter
 - 1 tablespoon pure vanilla extract
 - Large pinch kosher salt
 
