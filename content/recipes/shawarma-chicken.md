@@ -1,13 +1,15 @@
 +++
 date = "2026-04-08T20:06:00+00:00"
 title = "Oven-Roasted Chicken Shawarma"
-original_link = "Oven-Roasted Chicken Shawarma"
+original_link = "https://cooking.nytimes.com/recipes/1017161-oven-roasted-chicken-shawarma"
 +++
+
+Recipe taken from the [New York Times](https://archive.is/Oue6o).
 
 ## Ingredients
 
 - 2 lemons, juiced
-- ½ cup olive oil
+- ½ cup (108 grams) olive oil
 - 6 cloves garlic, minced
 - Salt, to taste
 - Freshly ground black pepper
