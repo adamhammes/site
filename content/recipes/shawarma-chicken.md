@@ -11,8 +11,8 @@ Recipe taken from the [New York Times](https://archive.is/Oue6o).
 - 2 lemons, juiced
 - ½ cup (108 grams) olive oil
 - 6 cloves garlic, minced
-- Salt, to taste
-- Freshly ground black pepper
+- 1 tsp kosher salt
+- 2 tsp freshly ground black pepper
 - 2 teaspoons ground cumin
 - 2 teaspoons paprika
 - ½ teaspoon turmeric
