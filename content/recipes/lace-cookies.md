@@ -8,7 +8,7 @@ original_link = "https://www.allrecipes.com/recipe/282681/lace-cookies-florentin
 
 - 1 ½ cups whole raw almonds (170 grams)
 - ½ cup unsalted butter
-- ¾ cup light brown sugar (160 grams)
+- ¾ cup (160 grams) light brown sugar (or 154 grams white sugar + 6 grams molasses)
 - ¼ cup honey (85 grams)
 - ½ teaspoon vanilla extract
 - 1 pinch salt
