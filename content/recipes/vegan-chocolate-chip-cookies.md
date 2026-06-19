@@ -12,7 +12,7 @@ Ingredients
 - 1 tbsp (7 grams) ground flaxseed
 - 2.5 tbsp (37 ml) water
 - 1/2 cup (113 grams) vegan butter, softened to room temperature
-- 1 1/4 cup (185 grams) brown sugar, lightly packed (use cane sugar + 2 tbsp molasses as a substitute)
+- 1 1/4 cup (185 grams) brown sugar, lightly packed (or 178g white sugar + 7g molasses)
 - 2 tsp (10 ml) pure vanilla extract
 - 188 g all purpose flour
 - 2 tsp cornstarch
