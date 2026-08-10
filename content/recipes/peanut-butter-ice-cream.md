@@ -9,13 +9,13 @@ Transcribed from "Jeni's Splendid Ice Creams At Home".
 
 - 2 2/3 cups (650g) whole milk
 - 1 tbsp + 2 tsp (13g) cornstarch
-- 2oz (56g) cream cheese, softened
-- 2/3 (178g) cup natural peanut butter
-- 1/2 tsp sea salt
 - 1 1/2 (340g) cups heavy cream
 - 3/4 (150g) cup sugar
 - 2 tbsp (39g) corn syrup
 - 1/4 cup (84g) honey
+- 2oz (56g) cream cheese, softened
+- 2/3 (178g) cup natural peanut butter
+- 1/2 tsp sea salt
 
 Optional:
 
