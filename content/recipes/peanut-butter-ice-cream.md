@@ -7,7 +7,7 @@ Transcribed from "Jeni's Splendid Ice Creams At Home".
 
 ## Ingredients
 
-- 2 2/3 cups (550g) whole milk
+- 2 2/3 cups (650g) whole milk
 - 1 tbsp + 2 tsp (13g) cornstarch
 - 2oz (56g) cream cheese, softened
 - 2/3 (178g) cup natural peanut butter
