@@ -30,8 +30,12 @@ Ice cream base
    Boil until the syrup beings to bubble (about 10 seconds), then immediately move from the heat, add the chocolate, and let stand for 5 minutes.
    Stir the syrup until smooth.
    Set aside.
-   1.. For the ice cream base: Mix about 2 tbsp of the milk with the cornstarch in a small bowl to make a smooth slurry.
+
+2. For the ice cream base: Mix about 2 tbsp of the milk with the cornstarch in a small bowl to make a smooth slurry.
    Whisk the cream cheese, warm chocolate syrup, and salt ina a medium bowl until smooth.
-2. Combine the remaining milk, cream sugar, and corn syrup in a 4-quart saucepan, bring to a rolling boil over medium-high heat, and boil for 4 minutes.
-3. Remove from the heat and gradually whisk in the cornstarch slurry. Bring the mixture back to a boil over medium-high heat and cook, stirring with a heatproof spatula, until slightly thickened, about 1 minute, remove heat.
-4. Gradually whisk the hot milk mixture into the cream cheese mixture until smooth. Chill overnight.
+
+3. Combine the remaining milk, cream sugar, and corn syrup in a 4-quart saucepan, bring to a rolling boil over medium-high heat, and boil for 4 minutes.
+
+4. Remove from the heat and gradually whisk in the cornstarch slurry. Bring the mixture back to a boil over medium-high heat and cook, stirring with a heatproof spatula, until slightly thickened, about 1 minute, remove heat.
+
+5. Gradually whisk the hot milk mixture into the cream cheese mixture until smooth. Chill overnight.
