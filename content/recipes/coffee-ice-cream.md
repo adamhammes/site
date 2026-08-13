@@ -28,4 +28,6 @@ Transcribed from "Jeni's Splendid Ice Creams At Home".
 
 1. Return the cream mixutre to the saucepan and gradually whisk in the cornstarch slurry.
    Bring back to a boil over medium-high heat and cook, stirring with a rubber spatula, until slightly thickened, about 1 minute.
-   Remove from the heat and chill the mixture overnight.
+   Remove from the heat
+
+1. Gradually whisk the hot milk mixture into the cream cheese until smooth. Chill overnight.
