@@ -148,6 +148,27 @@ Object.entries(ingredients).forEach(([ingredient, value]) => {
   });
 });
 
+const vulgarFractions = {
+  "¼": "1/4",
+  "½": "1/2",
+  "¾": "3/4",
+  "⅐": "1/7",
+  "⅑": "1/9",
+  "⅒": "1/10",
+  "⅓": "1/3",
+  "⅔": "2/3",
+  "⅕": "1/5",
+  "⅖": "2/5",
+  "⅗": "3/5",
+  "⅘": "4/5",
+  "⅙": "1/6",
+  "⅚": "5/6",
+  "⅛": "1/8",
+  "⅜": "3/8",
+  "⅝": "5/8",
+  "⅞": "7/8",
+};
+
 /**
  * @typedef {Object} PartialParseResult
  * @property {string} match
@@ -202,7 +223,9 @@ const parseMeasure = (input) => {
  * @returns number
  */
 const amountToNumber = (amount) => {
-  // leaving out vulgar fractions for now
+  Object.entries(vulgarFractions).forEach(([short, long]) => {
+    amount = amount.replaceAll(short, long);
+  });
   if (amount.includes(".") || !amount.includes("/")) {
     return Number(amount);
   }
