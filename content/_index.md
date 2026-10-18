@@ -6,18 +6,16 @@ description = "Adam Hammes's personal website"
 
 # Hi! I'm Adam Hammes.
 
-I'm an American software developer, currently living in Quebec City. I
+I'm an American software developer, currently living in Iowa City. I
 graduated Cum Laude from Iowa State University with a Bachelor of Science in
 Computer Science. My professional experience includes working at
-[Workiva](https://www.workiva.com/) and
-[Nventive](https://Nventive.com/fr/); I led the frontend redesign of the
-[Alfa Romeo Build &amp; Price.](https://www.alfaromeo.ca/en/build-and-price/)
+[nventive](https://nventive.com/en/) and [Outcomes](https://www.outcomes.com/),
 
-In my free time, I enjoy playing piano and swing dancing.
+In my free time, I enjoy biking, swing dancing, and baking.
 
 ## Links:
 
-- [My written articles](/articles/)
 - [All the recipes](/recipes/) I've cared to save on my site.
 - [A tool for calculating beats per minute](/bpm/)
 - [West Coast Playlists](/wcs-playlists)
+- [A recipe conversion tool](/baking-conversion)

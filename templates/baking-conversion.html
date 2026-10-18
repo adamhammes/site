@@ -1,0 +1,59 @@
+{% extends "page.html" %}
+<!-- prettier-ignore -->
+{% block title %}
+Baking Conversion Calculator
+{% endblock %}
+<!-- prettier-ignore -->
+{% block description %}
+  A tool for converting volume units to mass
+{% endblock %}
+<!-- prettier-ignore -->
+{% block content %}
+
+<script src="/ingredient.js" defer></script>
+
+<label id="input-wrapper">
+  Enter an ingredient, e.g. "1.5 cups flour":
+  <br />
+  <input id="ingredient-input" type="text" />
+</label>
+<div id="output-holder">
+  <span class="output-display" id="amount-holder"></span>
+  <span class="output-display" id="measure-holder"></span>
+  <span class="output-display" id="ingredient-holder"></span>
+  <span class="output-display" id="grams-container"></span>
+</div>
+
+<style>
+  #ingredient-input {
+    margin-top: calc(0.5 * var(--rhythm));
+  }
+
+  #output-holder {
+    margin-top: var(--rhythm);
+  }
+
+  .output-display {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 2px 4px;
+  }
+
+  .output-display:empty {
+    display: none;
+  }
+
+  #amount-holder {
+    background-color: #fadadd;
+  }
+
+  #measure-holder {
+    background-color: #dcebfa;
+  }
+
+  #ingredient-holder {
+    background-color: #e5f0e0;
+  }
+</style>
+
+{% endblock content %}
